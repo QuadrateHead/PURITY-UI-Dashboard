@@ -1,0 +1,70 @@
+.orders {
+   width: 100%;
+   @include block-bg;
+   display: flex;
+   flex-direction: column;
+   padding: rem(16) rem(16.1) rem(30.05) rem(16.2);
+   gap: rem(35);
+		&__heading {
+		}
+
+		&__title {
+		}
+
+		&__subtitle {
+		}
+
+
+		&__list {
+         display: flex;
+         flex-direction: column;
+         padding-left: rem(20);
+         margin-bottom: rem(31);
+         
+		}
+
+		&__list-item {
+         display: flex;
+         gap: rem(19.18);
+         margin-bottom: rem(5);
+         margin-left: rem(-12);
+         min-height: rem(78);
+         &:last-child{
+            .orders__l-line{
+               height: rem(15);
+            }
+         }
+		}
+
+		&__l-icon-line {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: rem(6.5);
+         & svg{
+            width: rem(16);      /* Set any size you want here */
+            height: auto;    /* This keeps the bell from looking "squashed" */
+            color: #4FD1C5;  /* This controls the fill color because of currentColor */
+            display: inline-block;
+            vertical-align: middle;
+         }
+		}
+
+		&__l-line {
+         background-color: #e2e8f0;
+         width: 2px;
+         height: 48px;
+         
+		}
+
+		&__l-text-box {
+         height: rem(78);
+		}
+
+		&__l-heading {
+		}
+
+		&__l-date {
+		}
+}
+

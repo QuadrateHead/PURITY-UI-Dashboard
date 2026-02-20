@@ -1,0 +1,63 @@
+.mc {
+		&__blocks {
+         display: grid;
+         grid-template-columns:1fr 1fr 1fr 1fr;
+         gap: rem(24.23);
+         @media (max-width:1200px) {
+            grid-template-columns: 1fr 1fr;
+         }
+         @media (max-width:768px) {
+            grid-template-columns: 1fr;
+         }
+		}
+
+		&__card {
+         background: var(--bg-light);
+         box-shadow: var(--boxes-shadows);
+         border-radius: rem(15);
+         padding: rem(17.5) rem(17.67) rem(17.5) rem(21.7);
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-start;
+		}
+
+
+
+		&__text {
+         display: flex;
+         flex-direction: column;
+         gap: rem(1);
+		}
+
+		&__name {
+		}
+
+
+		&__data {
+         display: flex;
+         align-items: center;
+         gap: rem(5.05);
+		}
+
+		&__value {
+		}
+
+		&__percent {
+		}
+
+
+
+		&__icon-bg {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: rem(11.25) rem(11.36);
+         background-color: var(--icon-color-green);
+         box-shadow: var(--boxes-shadows);
+         border-radius: rem(12);
+		}
+
+		&__icon {
+         display: block;
+		}
+}

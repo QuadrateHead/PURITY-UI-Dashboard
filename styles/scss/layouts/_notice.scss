@@ -1,0 +1,64 @@
+.notice {
+   position: absolute;
+   top: rem(20);
+   right: 0;
+   z-index: 900;
+   visibility: hidden; 
+   pointer-events: none;
+   transition: all 0.15s ease-in-out 0s;
+   //transition: all 0.5s ease-out 0s;
+   @include block-bg;
+   border-radius: rem(6);
+   border: solid 1px;
+   gap: rem(10);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   padding: rem(16) rem(8);
+   min-width: rem(309.5);
+   transform: scale(0.8);
+   transform-origin: top right;
+   &.active{
+      visibility: visible;
+      height: auto;
+      transform: none;
+      transition: all 0.15s ease-in-out 0s;
+   }
+		&__btn {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         gap: rem(16);
+         padding: rem(6.400) rem(12.800);
+         &:hover{
+            background-color: rgb(237, 242, 247);
+         }
+		}
+
+		&__avatar {
+         width: rem(48);
+         height: rem(48);
+         border-radius: rem(12);
+		}
+
+		&__textbox {
+		}
+
+		&__heading {
+         display: flex;
+         gap: rem(5);
+		}
+
+		&__date {
+         display: flex;
+         gap: rem(5);
+         & svg{
+            display: block;
+            width: rem(10.83);
+         }
+		}
+
+		&__time {
+		}
+}

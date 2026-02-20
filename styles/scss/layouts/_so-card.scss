@@ -1,0 +1,81 @@
+.soc {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+	background-color: var(--bg-light);
+	border-radius: rem(15);
+	box-shadow: var(--boxes-shadows);
+	padding: rem(28) rem(19.18) rem(29) rem(21.2);
+   gap: rem(41);
+		&__info {
+         display: flex;
+         flex-direction: column;
+         gap: rem(6);
+         
+		}
+
+		&__heading {
+         line-height: 140%;
+		}
+
+		&__subtitle {
+		}
+
+
+		&__graph {
+			
+		}
+
+
+		&__scale {
+         grid-area: "scale";
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         gap: rem(35);
+		}
+
+		&__scale-text {
+			
+		}
+
+
+		&__months {
+         grid-area: "months";
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+		}
+
+		&__months-text {
+			//padding: rem(10) rem(8);
+			transition: background 0.2s;
+			&.active {
+				background: #2d3748; // Dark background
+				color: #fff;         // White text
+			}
+		}
+
+//?Make a graph perfect//
+		&__graph-grid {
+			position: relative;
+         grid-area: "graph";
+			width: 100%;
+			height: 100%; // You MUST give the graph container a height!
+			min-width: 0;
+		}
+
+		&__grid-bg {
+			
+		}
+
+		&__grid-lines {
+			position: absolute; // Keeps it perfectly aligned with the background
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			cursor:crosshair;
+		}
+}
+

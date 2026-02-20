@@ -1,0 +1,18 @@
+$base-font-size: 16;
+
+@function rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+// I don't know for that this function
+@function hex-to-hsl($hex) {
+  @if type-of($hex) != 'color' {
+    @error "hex-to-hsl() expects a valid color value.";
+  }
+
+  @return hsl(
+    hue($hex),
+    saturation($hex),
+    lightness($hex)
+  );
+}
+

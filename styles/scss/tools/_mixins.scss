@@ -1,0 +1,10 @@
+@mixin align-center{
+   display: flex;
+   align-items: center;
+}
+@mixin block-bg{
+   width: 100%;
+	background-color: var(--bg-light);
+	border-radius: rem(15);
+	box-shadow: var(--boxes-shadows);
+}

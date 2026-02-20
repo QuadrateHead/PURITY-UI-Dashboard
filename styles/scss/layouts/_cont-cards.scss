@@ -1,0 +1,13 @@
+.cont-cards{
+   display: grid;
+   grid-template-columns: (1040.66/1617)*100% (520.33/1617)*100%;
+   gap: rem(24.23);
+   @media (max-width:960px){
+      grid-template-columns: 1fr 50%;
+   }
+   @media (max-width:767px){
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+   }
+
+}

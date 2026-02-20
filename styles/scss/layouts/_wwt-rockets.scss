@@ -1,0 +1,56 @@
+.wwt-rockets {
+   display: flex;
+   justify-content: space-between;
+	background-color: var(--bg-light);
+	border-radius: rem(15);
+	box-shadow: var(--boxes-shadows);
+	padding: rem(17.5) rem(17.67); 
+      &__bg{
+         width: 100%;
+         height: 100%;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background: linear-gradient(0deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%), 
+          url("../../img/images/wwt-rockets/brooke-cagle-g1Kr4Ozfoac-unsplash\ 1.png");
+         border-radius: rem(12);
+         padding: rem(21) rem(22.62) rem(12.5);
+      }
+
+		&__content {
+         width: (388/580.609)*100%;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+		}
+
+		&__textbox {
+		}
+
+		&__title {
+         color: #fff;
+         margin-bottom: rem(6);
+		}
+
+		&__subtitle {
+         color: #fff;
+		}
+
+		&__link {
+         height: rem(24);
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: rem(10);
+			line-height: 150%;
+			color: #fff;
+			display: inline-flex;
+			align-items: center;
+			gap: rem(5.05);
+         &:hover{
+				transition: gap 0.1s linear 0s;
+				gap: rem(7.25);
+			}
+		}
+}
+

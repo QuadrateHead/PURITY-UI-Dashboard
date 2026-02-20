@@ -1,0 +1,196 @@
+.bcc {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+	background-color: var(--bg-light);
+	border-radius: rem(15);
+	box-shadow: var(--boxes-shadows);
+	padding: rem(16) rem(16.1) rem(30.05) rem(16.2);
+		&__graph {
+         display: flex;
+         gap: (51.48/630)*100%;
+         align-items: flex-end;
+         margin-bottom: rem(24);
+         background: var(--black-gradient);
+         width: 100%;
+         //height: rem(222);
+         border-radius: rem(12);
+         padding: rem(31.5) rem(35.38) rem(31) rem(30.23);
+		}
+      &__graph-scale{
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         gap: rem(14);
+      }
+      &__graph-linear-gph{
+         width: 100%;
+         display: flex;
+         align-items: flex-end;
+         justify-content: space-between;
+         padding-bottom: rem(4);
+      }
+      &__graph-item{
+         border-radius: 15px;
+         width: rem(7);
+         height: 0;
+         background: #fff;
+         transition: height 0.1s ease-out 0.1s;
+         transition-delay: calc(var(--i) * 0.075s);
+         position: relative;
+         @media (max-width: 400px){
+            width: (7/500)*100%;
+         }
+         &:hover{
+            z-index: 999;
+            .bcc__graph-info{
+               display: block;
+               opacity: 1;
+               //top: -25%;
+               //left: 50%;
+               transform: translate(5%, -50%);
+               //?Animation//
+               &:hover{
+                  
+               }
+            }
+         }
+      }
+
+
+		&__graph-info {
+         position: absolute;
+         z-index: 100;
+         opacity: 0;  
+         width: rem(100);
+         box-shadow: 0 rem(4) rem(6) 0 rgba(255, 255, 255, 0.1);
+         border-radius: rem(6);
+         background: rgba($color: #2d3748, $alpha: 0.90);
+         transform: translate(0, 0);
+         transition: transform 0.2s ease-out 0s;
+		}
+
+		&__graph-month {
+         background: rgba(0, 0, 0 , 0.5);
+         padding: rem(4) rem(3);
+         border-radius: rem(6) rem(6) 0 0;
+		}
+
+		&__graph-heading {
+         font-family: var(--font-family);
+         font-weight: 400;
+         font-size: rem(10);
+         line-height: 150%;
+         color: #fff;
+		}
+
+		&__graph-sales {
+         padding: rem(6) rem(3);
+         display: flex;
+         align-items: flex-end;
+         gap: rem(5);
+		}
+
+		&__graph-round {
+         display: block;
+         width: rem(13);
+         height: rem(13);
+         border-radius: 50%;
+         background-color: var(--muted-text);
+		}
+
+		&__graph-name {
+         font-family: var(--font-family);
+         font-weight: 400;
+         font-size: rem(10);
+         line-height: 100%;
+         color: #fff;
+		}
+
+		&__graph-value {
+         font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(10);
+         line-height: 100%;
+         color: #fff;
+		}
+
+
+		&__textbox {
+         display: flex;
+         flex-direction: column;
+         gap: rem(6);
+         margin-bottom: rem(36.5);
+		}
+
+		&__heading {
+		}
+
+		&__subtitle {
+		}
+
+
+		&__cards {
+         width: 100%;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         gap: rem(10.1);
+         @media (max-width: 400px){
+            grid-template-columns: 1fr;
+         }
+		}
+
+		&__cards-item {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         gap: rem(5.5);
+		}
+
+		&__type {
+         display: flex;
+         align-items: center;
+         gap: rem(10.1);
+		}
+
+		&__icon-bg {
+         border-radius: 6px;
+         background: var(--icon-color-green);
+         padding: rem(6.25) rem(6.31);
+		}
+
+		&__icon {
+         display: block;
+		}
+
+		&__name {
+		}
+
+		&__value {
+		}
+
+		&__progress-bar {
+         position: relative;
+         border: 3.00px solid var(--bar-color);
+         border-radius: rem(6);
+         width: 100%;
+         height: 0px;
+         z-index: 0;
+			&--value {
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            z-index: 0;
+            box-sizing: content-box;
+            border: 3.00px solid #4fd1c5;
+            border-radius: rem(6);
+            height: 0px;
+            width: 0;
+            transition: width 0.1s ease-out 0.1s;
+            & p{
+               display: none;
+            }
+			}
+		}
+}
+

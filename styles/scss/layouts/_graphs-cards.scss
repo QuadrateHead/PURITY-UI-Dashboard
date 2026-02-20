@@ -1,0 +1,10 @@
+.graphs-cards{
+   display: grid;
+   grid-template-columns: (660/1617)*100fr (930/1617)*100fr;
+   gap: rem(24.23);
+   @media (max-width:960px){
+      //!Fix height of second block//
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr rem(445);
+   }
+}

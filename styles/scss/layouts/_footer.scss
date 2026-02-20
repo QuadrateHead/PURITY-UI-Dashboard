@@ -1,0 +1,38 @@
+.footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+	flex-wrap: wrap;
+		&__copyright {
+			text-align: center;
+		}
+
+		&__cr-block {
+		}
+
+		&__cr-link {
+         font-family: var(--font-family);
+         font-size: rem(12);
+         line-height: 150%;
+         font-weight: 700;
+         color: var(--link-cyan-light);
+		}
+
+
+      
+		&__useful-links {
+			
+		}
+
+		&__links-nav {
+         display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+         column-gap: rem(44.42);
+		}
+
+		&__links-a {
+		}
+		
+}
+

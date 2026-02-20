@@ -1,0 +1,98 @@
+:root{
+   //!Typography//
+   --font-family: "Helvetica", sans-serif;
+   --second-family: "Font Awesome 5 Free", sans-serif;
+   //!BG//
+   --bg-light:hsl(0 0% 100%);
+   --bg-light-gr: 0 0% 100%;
+   --bg: hsl(210,17%,98%);
+   //!Additional BG colors//
+   --bg-cyan: #4FD1C5;
+   //!Text//
+   --main-text: hsl(218,23%,23%); //2d3748
+   --muted-text: hsl(214,20%,69%);
+   --link-text: hsl(218,23%,23%);
+   --num-text: #cbd5e0; //211,25,84
+   //!Pages text in navbar//
+   --page: hsl(214,20%,69%);
+   --current-page: hsl(216,24%,16%);
+   //!+ or -//
+   --ups-num: #48bb78;
+   --downs-num: #e53e3e;
+   //!ButtonsBG//
+   --btn-bg:hsl(210,38%,95%);
+   --btn-white:hsl(0,0%,100%);
+   --btn-bg-green: #4fd1c5;
+   --btn-nav: hsl(0, 0%, 100%);
+   --btn-stg: hsl(0, 0%, 100%);
+
+   --btn-stg-text1: hsl(0, 0%, 100%);
+   --btn-stg-text2: hsl(216,24%,16%);
+
+   --btn-tweet: hsl(203, 89%, 53%);
+   --btn-tweet-hover: hsl(203, 89%, 48%);
+
+   --btn-share: hsl(220, 46%, 41%);
+   --btn-share-hover: hsl(220, 46%, 36%);
+   //!Links//
+   --link-dark: hsl(216,15%,52%);
+   --link-light: #a0aec0;
+   --link-white: #FFFFFF;
+   --link-cyan-light: #38b2ac; //hsl(177,52,46)
+   --link-cyan-dark: #4fd1c5; //hsl (174,59,56)
+   //!Checkbox//
+   --checkbox-cyan-light: hsl(174,59%,56%); //#4fd1c5//
+   --checkbox-cyan-dark: hsl(179,51%,39%); //#319694//
+   --chekbox-default: hsl(214,32%,91%); //For checkbox//
+   --chekbox-default-hover: hsl(211, 25%, 84%);
+   //!Icons//
+   --icon-color-green: #4fd1c5;
+   --icon-color-white: hsl(0, 0%, 100%);
+   //!Bar//
+   --bar-color: hsl(214,32%,91%); //For checkbox//
+   //!Table//
+   --table-lines: hsl(210, 38%, 95%);
+   //!gradients//
+   --black-gradient: linear-gradient(41deg, #313860 0%, #151928 100%);
+   --btn-black-gradient: linear-gradient(41deg, #313860 0%, #151928 100%);
+   --light-gradient: linear-gradient(137deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 100%);;
+   --shadow-gradient: linear-gradient(0deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
+   //!ShadowBox//
+   --boxes-shadows: #{0 rem(4) rem(6) 0 rgba(0, 0, 0, 0.02)};
+   --navbar-shadows: #{0 rem(7) rem(23) 0 rgba(0, 0, 0, 0.05)};
+}
+
+body.dark{ 
+   transition: color, background-color 0.2s linear 0s;
+   --bg:hsl(220,26%,14%);
+   --bg-light: hsl(216,24%,16%);
+   --bg-light-gr: 216 24% 16%;
+   --main-text: hsl(0, 0%, 100%);
+   --link-text: hsl(0, 0%, 100%);
+   --icon-color-white: hsl(0, 0%, 100%);
+   --link-dark: hsl(214,32%,91%);
+   --bar-color: rgba(255, 255, 255, 0.16);
+   --btn-black-gradient: #fff;
+
+   --btn-stg:rgb(74, 85, 104);
+   --btn-stg-text1: hsl(216,24%,16%);
+   --btn-stg-text2: hsl(0, 0%, 100%);
+
+   --btn-tweet: hsl(202, 89%, 82%);
+   --btn-share: hsl(221, 32%, 79%);
+   --btn-tweet-hover: hsl(202, 89%, 72%);
+   --btn-share-hover: hsl(221, 32%, 54%);
+
+   --chekbox-default: rgba(255, 255, 255, 0.16);
+   --chekbox-default-hover: rgba(255, 255, 255, 0.24);
+
+   --table-lines: none;
+}
+
+
+
+
+
+
+
+
