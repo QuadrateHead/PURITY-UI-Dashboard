@@ -1,10 +1,19 @@
 const links = document.querySelectorAll('.sidebar__page');
-const currentPath = window.location.pathname;
+
+// Normalize the current path (remove trailing slashes for consistency)
+const currentPath = window.location.pathname.replace(/\/$/, "");
 
 links.forEach(link => {
-   if (link.getAttribute('href') === currentPath){
-      
-      link.closest('.sidebar__deco').classList.add('current-page');
-   }
+    // Accessing .pathname on the link object gives the absolute path
+    // We also normalize it by removing the trailing slash
+    const linkPath = link.pathname.replace(/\/$/, "");
+
+    if (currentPath === linkPath) {
+        link.closest('.sidebar__deco')?.classList.add('current-page');
+    } 
+    // Handle the "Home" edge case where / might be index.html
+    else if ((currentPath === "" || currentPath === "/index.html") && linkPath === "/index.html") {
+        link.closest('.sidebar__deco')?.classList.add('current-page');
+    }
 });
 

@@ -4,9 +4,28 @@
 	align-items: center;
 	width: rem(251);
 	height: 100vh;
+	&__close{
+		display: none;
+	}
 	&.active{
       background-color: var(--bg-light);
    	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
+		border-radius: rem(15);
+		overflow-y: scroll;
+		//!fix height//
+		height: 97.5vh;
+		.sidebar__close{
+			display: flex;
+			width: 100%;
+			justify-content: flex-end;
+			padding: rem(16);
+		}
+		.sidebar__close-icon{
+			display: block;
+			height: rem(12);
+			width: rem(12);
+			color: var(--main-text);
+		}
 	}
 		&__logo {
 			display: flex;

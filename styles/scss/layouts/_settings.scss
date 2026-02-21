@@ -294,19 +294,21 @@
    }
 
 
-
+   //!Fix btn as cause of scrollbar//
    &__btn {
       position: fixed;
-      bottom: (30/1920)*100%;
-      right: (35/1920)*100%;
+      bottom: rem(30);
+      right: rem(35);
       display: flex;
       justify-content: center;
       align-items: center;
       padding: rem(16);
+      box-sizing: border-box;
       border-radius: 50%;
       background-color:var(--btn-stg) ;
       box-shadow: rgba(0, 0, 0, 0.16) 0 rem(2) rem(12) 0;
       transition: box-shadow 0.1s linear 0s;
+      z-index: 750;
       &:hover{
          box-shadow: none;
          transition: box-shadow 0.1s linear 0s;

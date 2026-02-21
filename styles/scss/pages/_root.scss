@@ -47,8 +47,8 @@
       pointer-events: none;
       //transition: all 0.5s ease-out 0s;
       &.active{
-         top: 0;
-         left: 0;
+         top: 16px;
+         left: 16px;
          transition: left 0.5s ease-out 0s;
          visibility: visible;
          pointer-events: auto;
