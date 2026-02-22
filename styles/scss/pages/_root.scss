@@ -1,4 +1,13 @@
-
+html {
+  /* This reserves space for the scrollbar so the page doesn't jump when hidden */
+  scrollbar-gutter: stable;
+}
+.no-scroll{
+   overflow: hidden;
+   height: 100vh;      /* Locks the viewport height */
+   width: 100%;        /* Prevents horizontal shifting */
+    position: fixed;
+}
 .root{
    position: relative;
    transition: color, background-color 0.2s linear 0s;
@@ -48,10 +57,14 @@
       //transition: all 0.5s ease-out 0s;
       &.active{
          top: 16px;
+         bottom: 16px;
          left: 16px;
+         height: auto !important;      // Forces the sidebar to respect top/bottom boundaries
+         max-height: calc(100vh - 32px);
          transition: left 0.5s ease-out 0s;
          visibility: visible;
          pointer-events: auto;
+         
       }
    }
 }

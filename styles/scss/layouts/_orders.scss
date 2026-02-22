@@ -6,6 +6,9 @@
    padding: rem(16) rem(16.1) rem(30.05) rem(16.2);
    gap: rem(35);
 		&__heading {
+         display: flex;
+         flex-direction: column;
+         gap: rem(6)
 		}
 
 		&__title {

@@ -12,14 +12,20 @@ function openNTC() {
 const sideBar = document.querySelector(".sidebar")
 function openSB() {
    sideBar.classList.toggle("active");
+   document.getElementById("stg-backdrop").classList.toggle("active");
+   document.body.classList.toggle('no-scroll');
 }
 function closeSB(){
    sideBar.classList.remove("active");
+   document.getElementById("stg-backdrop").classList.remove("active");
+   document.body.classList.remove('no-scroll');
 }
 function checkWindowSize() {
   // window.innerWidth gives you the current pixel width
   if (window.innerWidth >= 1200) {
     sideBar.classList.remove('active');
+    document.getElementById("stg-backdrop").classList.remove("active");
+    document.body.classList.remove('no-scroll');
   }
 }
 
