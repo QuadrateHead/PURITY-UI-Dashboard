@@ -8,6 +8,11 @@
    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body class = "root">
+   <script>
+      if (localStorage.getItem('myTheme') === 'darkTheme') {
+         document.body.classList.add('dark');
+      }
+   </script>
    <!--Fix sidebar for 1200px version-->
    <div class="sidebar__backdrop" id="stg-backdrop" onclick="closeSB()"></div>
    <aside class="sidebar">

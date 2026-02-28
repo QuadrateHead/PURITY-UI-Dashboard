@@ -3,11 +3,17 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Dashboard</title>
+   <title>Dashboard - Tables</title>
    <link rel="stylesheet" href="styles/css/style.css">
    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body class = "root">
+   <script>
+      // Check localStorage immediately before the rest of the page renders
+      if (localStorage.getItem('myTheme') === 'darkTheme') {
+         document.body.classList.add('dark');
+      }
+   </script>
    <!--Fix sidebar for 1200px version-->
    <div class="sidebar__backdrop" id="stg-backdrop" onclick="closeSB()"></div>
    <aside class="sidebar">

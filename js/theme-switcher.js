@@ -1,5 +1,8 @@
-
-let page = document.querySelector("root")
 function themeChange() {
-   document.querySelector(".root").classList.toggle("dark");
-}
+   document.body.classList.toggle("dark");
+   if (document.body.classList.contains("dark")){
+      localStorage.setItem("myTheme", "darkTheme");
+   }else{
+      localStorage.removeItem("myTheme");
+   }
+};
