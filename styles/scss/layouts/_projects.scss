@@ -7,11 +7,12 @@
 		overflow-x: scroll;
 	}
    gap: rem(28.5);
-	padding: rem(16) rem(16.1) rem(30.05) rem(16.2);
+	padding: rem(16);
 		&__heading {
          display: flex;
          flex-direction: column;
-         gap: rem(6)
+         gap: rem(6);
+			padding-top: rem(12);
 		}
 
 		&__title {
@@ -57,6 +58,20 @@
 			minmax(rem(160), (247.89/1029.54)*100fr) 
 			minmax(rem(107.2), (165.8/1029.54)*100fr) 
 			minmax(rem(134), (205.64/1029.54)*100fr);
+			&--authors{
+				grid-template-columns: minmax(rem(262.64), (554.45/1541)*100fr) 
+				minmax(rem(140), (302.81/1541)*100fr) 
+				minmax(rem(115.75), (244.33/1541)*100fr) 
+				minmax(rem(120.16), (253.64/1541)*100fr)
+				minmax(rem(88), (185.8/1541)*100fr);
+			}
+			&--project2{
+				grid-template-columns: minmax(rem(250), (582.83/1541)*100fr) 
+				minmax(rem(107.2), (240.22/1541)*100fr) 
+				minmax(rem(100), (219.59/1541)*100fr) 
+				minmax(rem(134), (300.8/1541)*100fr)
+				minmax(rem(88), (197.56/1541)*100fr);
+			}
 		}
 
 		&__t-body {
@@ -84,6 +99,29 @@
 				align-items: flex-start;
 				gap: rem(4.5)
 			}
+
+			
+			&--author{
+				padding: rem(16) rem(24) rem(16) 0;
+			}
+			&--functn{
+				
+			}
+			&--status-a{
+				
+			}
+			
+			&--employed{
+				
+			}
+
+
+			&--edit{
+
+			}
+			&--status-pr{
+				
+			}
 		}
 
 
@@ -99,6 +137,35 @@
 		}
 
 		&__t-cmpns {
+		}
+
+
+		&__t-author-buffer {
+			display: flex;
+			align-items: center;
+			padding: rem(12.8) 0;
+			gap: rem(15);
+		}
+
+		&__t-author-profile{
+			width: rem(40);
+			height: rem(40);
+			object-fit: cover;
+			object-position: center;
+			border-radius: rem(12);
+			box-shadow: var(--boxes-shadows);
+		}
+
+		&__t-author-heading {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__t-author-name {
+		}
+
+		&__t-author-mail {
+			color: #718096;
 		}
 
 
@@ -130,8 +197,32 @@
 		}
 
 
+		&__t-functn-heading {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__t-functn-title {
+		}
+
+		&__t-functn-subtitle {
+			color: #718096;
+		}
+
+
 		&__t-budget-value {
 
+		}
+
+		&__t-status-a-value{
+			border-radius: rem(8);
+			padding: rem(3) rem(10.5) rem(2.5);
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: rem(14);
+			line-height: 140%;
+			text-align: center;
+			color: #fff;
 		}
 
 
@@ -165,6 +256,20 @@
                display: none;
             }
 			}
+		}
+
+		&__t-employed-date{
+
+		}
+
+		&__t-edit-text{
+			color: #718096;
+		}
+		&__t-edit-btn{
+			width: rem(40);
+			height: rem(40);
+			@include align-center;
+			justify-content: center;
 		}
 }
 
