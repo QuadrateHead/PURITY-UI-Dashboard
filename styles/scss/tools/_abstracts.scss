@@ -45,6 +45,7 @@
    --checkbox-cyan-dark: hsl(179,51%,39%); //#319694//
    --chekbox-default: hsl(214,32%,91%); //For checkbox//
    --chekbox-default-hover: hsl(211, 25%, 84%);
+   --checkbox-input: #e2e8f0;
    //!Icons//
    --icon-color-green: #4fd1c5;
    --icon-color-white: hsl(0, 0%, 100%);
@@ -87,6 +88,7 @@ body.dark{
 
    --chekbox-default: rgba(255, 255, 255, 0.16);
    --chekbox-default-hover: rgba(255, 255, 255, 0.24);
+   --checkbox-input: rgb(113, 128, 150);
 
    --table-lines: none;
    --status-text: hsl(213.75, 20.25%, 69.02%);

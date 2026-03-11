@@ -35,6 +35,7 @@
   --checkbox-cyan-dark: hsl(179,51%,39%);
   --chekbox-default: hsl(214,32%,91%);
   --chekbox-default-hover: hsl(211, 25%, 84%);
+  --checkbox-input: #e2e8f0;
   --icon-color-green: #4fd1c5;
   --icon-color-white: hsl(0, 0%, 100%);
   --bar-color: hsl(214,32%,91%);
@@ -70,6 +71,7 @@ body.dark {
   --btn-share-hover: hsl(221, 32%, 54%);
   --chekbox-default: rgba(255, 255, 255, 0.16);
   --chekbox-default-hover: rgba(255, 255, 255, 0.24);
+  --checkbox-input: rgb(113, 128, 150);
   --table-lines: none;
   --status-text: hsl(213.75, 20.25%, 69.02%);
   --status-bg: hsl(220, 25.71%, 13.73%);
@@ -253,6 +255,26 @@ input[type=file] {
   font-size: 0.75rem;
   line-height: 150%;
   color: var(--muted-text);
+}
+
+.card-text--main {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 140%;
+  text-align: center;
+}
+.card-text--small {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 140%;
+}
+.card-text--mini {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 150%;
 }
 
 .upps-downs {
@@ -2260,4 +2282,421 @@ html {
 }
 .orders__l-text-box {
   height: 4.875rem;
+}
+.fin-ac {
+  display: grid;
+  grid-template-columns: 61.1935683364fr 36.1471861472fr;
+  gap: 1.514375rem;
+}
+@media (max-width: 960px) {
+  .fin-ac {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50%;
+  }
+}
+@media (max-width: 767px) {
+  .fin-ac {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+.bank-acc {
+  display: grid;
+  grid-template-areas: "creditCard salary paypal" "paymentMethod paymentMethod paymentMethod";
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .bank-acc {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 13.75rem 15rem auto;
+    grid-template-areas: "creditCard creditCard" "salary paypal" "paymentMethod paymentMethod";
+  }
+}
+@media (max-width: 768px) {
+  .bank-acc {
+    grid-template-columns: 1fr;
+    grid-template-rows: 13.75rem 15rem 15rem auto;
+    grid-template-areas: "creditCard" "salary" "paypal" "paymentMethod";
+  }
+  .bank-acc__pm-cards-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.bank-acc__credit-card {
+  grid-area: creditCard;
+  background-image: url("../../img/images/bank-account/Background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.9375rem;
+  padding: 1.375rem 1.61125rem 2.274375rem 1.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.bank-acc__crc-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.bank-acc__crc-logo {
+  color: #fff;
+}
+.bank-acc__crc-bottom {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.8125rem;
+}
+.bank-acc__crc-humber {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #fff;
+}
+.bank-acc__crc-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.09375rem;
+}
+.bank-acc__crc-title {
+  color: #fff;
+}
+.bank-acc__crc-subtitle {
+  color: #fff;
+}
+.bank-acc__card {
+  width: 100%;
+  background-color: var(--bg-light);
+  border-radius: 0.9375rem;
+  -webkit-box-shadow: var(--boxes-shadows);
+          box-shadow: var(--boxes-shadows);
+  padding: 1.875rem 2.125rem 1.59375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+}
+.bank-acc__salary {
+  grid-area: salary;
+}
+.bank-acc__paypal {
+  grid-area: paypal;
+}
+.bank-acc__card-icon {
+  width: 63px;
+  height: 63px;
+  border-radius: 0.75rem;
+  background: var(--icon-color-green);
+  -webkit-box-shadow: var(--boxes-shadows);
+          box-shadow: var(--boxes-shadows);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bank-acc__card-icon svg {
+  display: block;
+  width: 1.625rem;
+  height: 1.625rem;
+}
+.bank-acc__card-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.bank-acc__card-text-box svg {
+  margin: 0.84375rem 0;
+}
+.bank-acc__card-heading {
+  color: var(--main-text);
+  margin-bottom: 0.21875rem;
+}
+.bank-acc__card-value {
+  color: var(--main-text);
+}
+.bank-acc__payment-method {
+  width: 100%;
+  width: 100%;
+  background-color: var(--bg-light);
+  border-radius: 0.9375rem;
+  -webkit-box-shadow: var(--boxes-shadows);
+          box-shadow: var(--boxes-shadows);
+  grid-area: paymentMethod;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+.bank-acc__pm-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.bank-acc__pm-heading {
+  color: var(--main-text);
+}
+.bank-acc__pm-add-new-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1.421875rem;
+  background: var(--black-gradient);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+}
+.bank-acc__pm-cards-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.53125rem;
+  width: 100%;
+}
+.bank-acc__pm-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.0625rem solid var(--checkbox-input);
+  border-radius: 0.9375rem;
+  padding: 1.421875rem 1.25rem;
+  width: 100%;
+}
+.bank-acc__pm-card svg {
+  display: block;
+}
+.bank-acc__pm-icon {
+  margin-right: 0.9375rem;
+}
+.bank-acc__pm-icon svg {
+  display: block;
+}
+.bank-acc__pm-input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  color: var(--main-text);
+}
+.bank-acc__pm-input::-webkit-input-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.bank-acc__pm-input::-moz-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.bank-acc__pm-input:-ms-input-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.bank-acc__pm-input::-ms-input-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.bank-acc__pm-input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.bank-acc__pm-write svg {
+  color: var(--main-text);
+}
+
+.invoices {
+  width: 100%;
+  background-color: var(--bg-light);
+  border-radius: 0.9375rem;
+  -webkit-box-shadow: var(--boxes-shadows);
+          box-shadow: var(--boxes-shadows);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.4375rem 1.40625rem 2.96875rem 1.3125rem;
+  gap: 1.40625rem;
+}
+.invoices__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.invoices__heading {
+  color: var(--main-text);
+}
+.invoices__view-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #4fd1c5;
+  border-radius: 0.75rem;
+  padding: 0.5625rem 1.96875rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 150%;
+  text-align: center;
+  color: #4fd1c5;
+}
+.invoices__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.53125rem;
+}
+.invoices__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.invoices__date-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.28125rem;
+}
+.invoices__date {
+  color: var(--main-text);
+}
+.invoices__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.invoices__pdf {
+  color: var(--main-text);
+  gap: 0.15625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 150%;
 }

@@ -1,0 +1,14 @@
+.fin-ac{
+   display: grid;
+   grid-template-columns: (989.5/1617)*100fr (584.5/1617)*100fr;
+   gap: rem(24.23);
+   @media (max-width:960px){
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 50%;
+   }
+   @media (max-width:767px){
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+   }
+
+}

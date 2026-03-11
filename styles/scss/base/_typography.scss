@@ -71,6 +71,27 @@
       color: var(--muted-text);
    }
 }
+.card-text{
+   &--main{
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: rem(17);
+      line-height: 140%;
+      text-align: center;
+   }
+   &--small{
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: rem(13);
+      line-height: 140%;
+   }
+   &--mini{
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(10);
+      line-height: 150%;
+   }
+}
 .upps-downs{
    font-family: var(--font-family);
    font-weight: 700;

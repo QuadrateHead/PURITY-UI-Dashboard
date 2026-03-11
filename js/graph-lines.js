@@ -1,16 +1,16 @@
 const ctx = document.getElementById('salesChart').getContext('2d');
-//?Mot Enough Perfect for final//
+//?Not Enough Perfect for final//
 // Create Green Gradient (Mobile App)
 function getGradient(ctx, chartArea, color) {
     const chartHeight = chartArea.bottom - chartArea.top;
     // Create gradient: (x0, y0, x1, y1)
     const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
-    
+
     // Bottom (Transparent)
-    gradient.addColorStop(0, 'rgba(' + color + ', 0)'); 
+    gradient.addColorStop(0, 'rgba(' + color + ', 0)');
     // Top (Semi-transparent)
-    gradient.addColorStop(1, 'rgba(' + color + ', 0.4)'); 
-    
+    gradient.addColorStop(1, 'rgba(' + color + ', 0.4)');
+
     return gradient;
 }
 
@@ -42,17 +42,17 @@ const monthMarkerPlugin = {
         // Only draw if the user is hovering over a point
         if (chart.tooltip?._active?.length) {
             const activePoint = chart.tooltip._active[0];
-            const {ctx, chartArea, scales} = chart;
-            
+            const { ctx, chartArea, scales } = chart;
+
             // Get the X coordinate of the hovered month
             const x = activePoint.element.x;
             const bottomY = chartArea.bottom;
-            
+
             // Get the month text (Jan, Feb, etc.)
             const text = chart.data.labels[activePoint.index];
-            
+
             ctx.save();
-            
+
             // Box Styling
             ctx.font = 'bold 12px Arial';
             const textWidth = ctx.measureText(text).width;
@@ -78,7 +78,7 @@ const monthMarkerPlugin = {
 
             // Draw the Month Text (White)
             ctx.fillStyle = '#ffffff';
-            ctx.textAlign = 'center', monthMarkerPlugin;
+            ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillText(text, x, bottomY + 5 + (boxHeight / 2));
 
@@ -96,15 +96,15 @@ const salesChart = new Chart(ctx, {
                 label: 'Websites', // Black line
                 data: [500, 240, 160, 280, 220, 260, 200, 180, 120, 170, 180, 140],
                 borderColor: '#2d3748',
-                backgroundColor: function(context) {
+                backgroundColor: function (context) {
                     const chart = context.chart;
-                    const {ctx, chartArea} = chart;
+                    const { ctx, chartArea } = chart;
                     if (!chartArea) return null; // Wait for initial render
                     return getGradient(ctx, chartArea, '45, 55, 72'); // Dark Gray RGB
                 },
                 fill: true,
                 tension: 0.4,
-                borderWidth: 4, 
+                borderWidth: 4,
                 // --------------------
                 pointRadius: 0,
                 pointHoverRadius: 6,
@@ -117,15 +117,15 @@ const salesChart = new Chart(ctx, {
                 label: 'Mobile App', // Green line
                 data: [180, 220, 200, 340, 360, 480, 350, 300, 360, 220, 400, 430],
                 borderColor: '#4fd1c5',
-                backgroundColor: function(context) {
+                backgroundColor: function (context) {
                     const chart = context.chart;
-                    const {ctx, chartArea} = chart;
+                    const { ctx, chartArea } = chart;
                     if (!chartArea) return null;
                     return getGradient(ctx, chartArea, '79, 209, 197'); // Teal RGB
                 },
                 fill: true,
                 tension: 0.4,
-                borderWidth: 4, 
+                borderWidth: 4,
                 // --------------------
                 pointRadius: 0,
                 pointHoverRadius: 6,
@@ -134,25 +134,25 @@ const salesChart = new Chart(ctx, {
                 pointBorderWidth: 3,
                 pointHoverBorderWidth: 2,
             }
-            
+
         ]
     },
     options: {
         responsive: true,
         maintainAspectRatio: false,
         onClick: (e, elements) => {
-        // Check if the user clicked on a data point or column
-        if (elements.length > 0) {
-            const index = elements[0].index; // The index of the month (0 for Jan, 1 for Feb...)
-            const month = salesChart.data.labels[index];
-            const mobileData = salesChart.data.datasets[0].data[index];
-            const webData = salesChart.data.datasets[1].data[index];
+            // Check if the user clicked on a data point or column
+            if (elements.length > 0) {
+                const index = elements[0].index; // The index of the month (0 for Jan, 1 for Feb...)
+                const month = salesChart.data.labels[index];
+                const webData = salesChart.data.datasets[0].data[index]; // index 0 = Websites
+                const mobileData = salesChart.data.datasets[1].data[index]; // index 1 = Mobile App
 
-            // For now, let's log it. You can replace this with a UI update.
-            console.log(`Month: ${month} | Mobile: ${mobileData} | Web: ${webData}`);
-            
-            // Example: Updating a text element in your 'soc__info' div
-            // document.querySelector('.soc__title').innerText = `${month} Sales Data`;
+                // For now, let's log it. You can replace this with a UI update.
+                console.log(`Month: ${month} | Mobile: ${mobileData} | Web: ${webData}`);
+
+                // Example: Updating a text element in your 'soc__info' div
+                // document.querySelector('.soc__title').innerText = `${month} Sales Data`;
             }
         },
 
@@ -175,7 +175,7 @@ const salesChart = new Chart(ctx, {
                 displayColors: true, // Shows the small colored circles
                 usePointStyle: true,
                 callbacks: {
-                    label: function(context) {
+                    label: function (context) {
                         return ` ${context.dataset.label}: ${context.parsed.y}`;
                     }
                 }
@@ -184,9 +184,8 @@ const salesChart = new Chart(ctx, {
         scales: {
             y: {
                 beginAtZero: true,
-                max: 500,
-                ticks: { 
-                    stepSize: 100, 
+                ticks: {
+                    stepSize: 100,
                     color: '#cbd5e0',
                     padding: 5
                 },
@@ -195,7 +194,7 @@ const salesChart = new Chart(ctx, {
                     display: false, // Removes the solid vertical line
                     dash: [5, 5]    // This ensures the axis line itself is dashed if it shows
                 },
-                grid: { 
+                grid: {
                     display: true,
                     color: '#E2E8F0',
                     lineWidth: 1,    // 1 is better for dashes; 2 often looks solid
@@ -208,7 +207,7 @@ const salesChart = new Chart(ctx, {
                 border: {
                     display: false // Removes the solid horizontal line
                 },
-                grid: { 
+                grid: {
                     display: false,
                     color: '#E2E8F0',
                     lineWidth: 1,
@@ -216,17 +215,17 @@ const salesChart = new Chart(ctx, {
                     borderDash: [5, 5]
                 }
             }
-            
+
         }
     }
 });
 window.addEventListener('resize', () => {
     const isMobile = window.innerWidth < 800;
-    
+
     // Update the padding values
     salesChart.options.scales.y.ticks.padding = isMobile ? 10 : 24.23;
     salesChart.options.scales.x.ticks.padding = isMobile ? 10 : 24.23;
-    
+
     // Tell Chart.js to re-draw with the new settings
     salesChart.update();
 });

@@ -1,0 +1,77 @@
+.invoices {
+@include block-bg;
+display: flex;
+flex-direction: column;
+padding:rem(23) rem(22.5) rem(47.5) rem(21);
+gap: rem(22.5);
+		&__header {
+         @include align-center;
+         justify-content: space-between;
+		}
+
+		&__heading {
+        color: var(--main-text);
+		}
+
+		&__view-all {
+         @include center;
+         border: 1.00px solid #4fd1c5;
+         border-radius: rem(12);
+         padding: rem(9) rem(31.5);
+         font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(10);
+         line-height: 150%;
+         text-align: center;
+         color: #4fd1c5;
+		}
+
+
+
+		&__list {
+         display: flex;
+         flex-direction: column;
+         gap: rem(24.5)
+		}
+
+		&__list-item {
+         @include align-center;
+         justify-content: space-between;
+
+		}
+
+		&__date-tag {
+         display: flex;
+         flex-direction: column;
+         gap: rem(4.5);
+		}
+
+		&__date {
+         color: var(--main-text);
+		}
+
+		&__tag {
+		}
+
+
+		&__info {
+         @include align-center;
+         gap: rem(16);
+		}
+
+		&__price {
+		}
+
+		&__pdf {
+            color: var(--main-text);
+            gap: rem(2.5);
+            @include align-center;
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: rem(10);
+            line-height: 150%;
+            & svg{
+                
+            }
+		}
+}
