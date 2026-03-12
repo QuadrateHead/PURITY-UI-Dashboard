@@ -11,12 +11,15 @@ function navbarFixed() {
    if (navbar.classList.contains("fixed")) {
       localStorage.setItem("isFixed", "active")
    } else {
-      localStorage.removeItem("isFixed")
+      localStorage.removeItem("isFixed");
+      navbar.classList.remove("is-stuck");
    }
 }
-//!Bug with state of is-stuck when fixed class switch//
+let observerReady = false;
+//!Bug with state of is-stuck when fixed class switch//Fixed half 
 const observer = new IntersectionObserver(
    ([entry]) => {
+      if (!observerReady) { observerReady = true; return; }
       if (!navbar.classList.contains("fixed")) return;
       if (!entry.isIntersecting) {
          // Sticky активировался
