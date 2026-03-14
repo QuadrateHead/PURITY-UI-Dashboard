@@ -24,6 +24,10 @@ gap: rem(22.5);
          line-height: 150%;
          text-align: center;
          color: #4fd1c5;
+         cursor: pointer;
+         &:hover{
+            background-color: rgba(#4fd1c5, 0.15);
+         }
 		}
 
 
@@ -31,7 +35,8 @@ gap: rem(22.5);
 		&__list {
          display: flex;
          flex-direction: column;
-         gap: rem(24.5)
+         gap: rem(24.5);
+         margin-left: rem(1.5); 
 		}
 
 		&__list-item {

@@ -1,6 +1,6 @@
-.fin-ac{
+.bill-cont{
    display: grid;
-   grid-template-columns: (989.5/1617)*100fr (584.5/1617)*100fr;
+   grid-template-columns: (900/1617)*100fr (674/1617)*100fr;
    gap: rem(24.23);
    @media (max-width:960px){
       grid-template-columns: 1fr;
@@ -8,5 +8,4 @@
    @media (max-width:767px){
       grid-template-columns: 1fr;
    }
-
 }

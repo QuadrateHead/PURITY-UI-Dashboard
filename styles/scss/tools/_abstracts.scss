@@ -6,6 +6,7 @@
    --bg-light:hsl(0 0% 100%);
    --bg-light-gr: 0 0% 100%;
    --bg: hsl(210,17%,98%);
+   --bg-dark: hsl(210, 16.67%, 97.65%);
    //!Additional BG colors//
    --bg-cyan: #4FD1C5;
    //!Text//
@@ -70,6 +71,7 @@ body.dark{
    --bg:hsl(220,26%,14%);
    --bg-light: hsl(216,24%,16%);
    --bg-light-gr: 216 24% 16%;
+   --bg-dark: hsl(220, 25.71%, 13.73%);
    --main-text: hsl(0, 0%, 100%);
    --link-text: hsl(0, 0%, 100%);
    --icon-color-white: hsl(0, 0%, 100%);

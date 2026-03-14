@@ -1,6 +1,7 @@
 .stgbar {
    display: flex;
    flex-direction: column;
+   min-height: 100dvh;
    height: 100dvh;
    width: rem(320);
    background-color: var(--bg-light);
