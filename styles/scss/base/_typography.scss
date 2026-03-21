@@ -103,6 +103,9 @@
    &--downs{
       color: var(--downs-num);
    }
+   &--default{
+      color: var(--muted-text);
+   }
 }
 .upps-downs-char{
    font-family: var(--font-family);

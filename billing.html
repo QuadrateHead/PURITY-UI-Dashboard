@@ -390,7 +390,7 @@
                   </svg>
                </div>
                <div class="bank-acc__crc-bottom">
-                  <h2 class="bank-acc__crc-humber">7812 2139 0823 XXXX</h2>
+                  <h2 id = "cardNum" class="bank-acc__crc-humber">7812 2139 0823 XXXX</h2>
                   <div class="bank-acc__crc-value">
                      <div class="bank-acc__crc-valid-thru">
                         <p class="bank-acc__crc-title card-text--mini">VALID THRU</p>
@@ -451,10 +451,10 @@
                   <h1 class="bank-acc__card-value card-text--main">$455.00</h1>
                </div>
             </div>
-            <form method="get" class="bank-acc__payment-method">
+            <form id="paymentForm" action="" method="get" class="bank-acc__payment-method">
                <div class="bank-acc__pm-header">
                   <h2 class="bank-acc__pm-heading card-text--small">Payment Method</h2>
-                  <button type = "submit" id="cardNum" class="bank-acc__pm-add-new-card">ADD A NEW CARD</button>
+                  <button type = "submit" id="cardNumBtn" class="bank-acc__pm-add-new-card">ADD A NEW CARD</button>
                </div>
                <div class="bank-acc__pm-cards-box">
                   <div class="bank-acc__pm-card">
@@ -464,7 +464,7 @@
                            <circle cx="14.3686" cy="6.63158" r="6.63158" fill="#F79E1B" />
                         </svg>
                      </div>
-                     <input type="text" inputmode="numeric" pattern="[0-9]{13,19}" maxlength="16" name="masterCard" id="cardNum" class="bank-acc__pm-input" placeholder="7812 2139 0823 XXXX">
+                     <input type="text" inputmode="numeric" pattern="[0-9]{13,19}" maxlength="16" name="masterCard" id="cardNumMasterCard" class="bank-acc__pm-input" placeholder="7812 2139 0823 XXXX">
                      <button class="bank-acc__pm-write">
                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <g clip-path="url(#clip0_52_447)">
@@ -484,7 +484,7 @@
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6708 2.72436C12.6568 3.91141 13.653 4.57385 14.4034 4.96771C15.1744 5.37186 15.4333 5.631 15.4304 5.99233C15.4245 6.54545 14.8153 6.78948 14.2452 6.79899C13.2505 6.81561 12.6723 6.50976 12.2125 6.27839L11.8542 8.08427C12.3155 8.31333 13.1696 8.51303 14.0554 8.52174C16.1345 8.52174 17.4947 7.4163 17.5021 5.70231C17.5102 3.52712 14.7087 3.40665 14.7278 2.43434C14.7344 2.13957 14.9956 1.82495 15.568 1.74492C15.8512 1.70455 16.6332 1.67361 17.5198 2.11338L17.8677 0.366151C17.391 0.179117 16.7782 0 16.0153 0C14.0583 0 12.6819 1.12049 12.6708 2.72436ZM21.2115 0.150551C20.8319 0.150551 20.5118 0.389109 20.3691 0.755194L17.3991 8.39336H19.4767L19.8901 7.16269H22.429L22.6689 8.39336H24.5L22.9021 0.150551H21.2115ZM21.5021 2.37727L22.1016 5.47247H20.4596L21.5021 2.37727ZM10.1518 0.150551L8.51418 8.39336H10.4939L12.1308 0.150551H10.1518ZM7.22303 0.150551L5.16233 5.7609L4.32878 0.99052C4.23097 0.458051 3.84472 0.150551 3.41579 0.150551H0.0471011L0 0.389901C0.691574 0.551535 1.47729 0.812261 1.95326 1.09119C2.24457 1.26154 2.32775 1.4105 2.42336 1.81545L4.00214 8.39336H6.0945L9.3021 0.150551H7.22303Z" fill="#4318FF" />
                         </svg>
                      </div>
-                     <input type="number" name="visaCard" id="cardNum" class="bank-acc__pm-input" placeholder="7812 2139 0823 XXXX">
+                     <input type="text" inputmode="numeric" pattern="[0-9]{13,19}" maxlength="16" name="visaCard" id="cardNumVisa" class="bank-acc__pm-input" placeholder="7812 2139 0823 XXXX">
                      <button class="bank-acc__pm-write">
                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <g clip-path="url(#clip0_52_447)">
@@ -745,7 +745,150 @@
                </li>
             </ul>
          </div>
-         <div class="transctns"></div>
+         <div class="transctns">
+            <div class="transctns__header">
+               <h1 class="transctns__heading card-text--main">Your Transactions</h1>
+               <div class="transctns__duration card-text--small">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12.1875 2.34317H2.8125C2.03585 2.34317 1.40625 2.97277 1.40625 3.74942V12.1869C1.40625 12.9636 2.03585 13.5932 2.8125 13.5932H12.1875C12.9641 13.5932 13.5937 12.9636 13.5937 12.1869V3.74942C13.5937 2.97277 12.9641 2.34317 12.1875 2.34317Z" fill="white" stroke="#2D3748" stroke-width="0.75" stroke-linejoin="round" />
+                     <path d="M11.6549 2.34317H3.34512C2.27607 2.34317 1.40625 3.22647 1.40625 4.31192V6.09317H1.875C1.875 5.62442 2.34375 5.15567 2.8125 5.15567H12.1875C12.6562 5.15567 13.125 5.62442 13.125 6.09317H13.5937V4.31192C13.5937 3.22647 12.7239 2.34317 11.6549 2.34317Z" fill="#2D3748" />
+                     <path d="M8.67187 7.49939C9.0602 7.49939 9.375 7.18459 9.375 6.79626C9.375 6.40794 9.0602 6.09314 8.67187 6.09314C8.28355 6.09314 7.96875 6.40794 7.96875 6.79626C7.96875 7.18459 8.28355 7.49939 8.67187 7.49939Z" fill="#2D3748" />
+                     <path d="M11.0156 7.49939C11.4039 7.49939 11.7187 7.18459 11.7187 6.79626C11.7187 6.40794 11.4039 6.09314 11.0156 6.09314C10.6273 6.09314 10.3125 6.40794 10.3125 6.79626C10.3125 7.18459 10.6273 7.49939 11.0156 7.49939Z" fill="#2D3748" />
+                     <path d="M8.67187 9.84271C9.0602 9.84271 9.375 9.52791 9.375 9.13959C9.375 8.75126 9.0602 8.43646 8.67187 8.43646C8.28355 8.43646 7.96875 8.75126 7.96875 9.13959C7.96875 9.52791 8.28355 9.84271 8.67187 9.84271Z" fill="#2D3748" />
+                     <path d="M11.0156 9.84271C11.4039 9.84271 11.7187 9.52791 11.7187 9.13959C11.7187 8.75126 11.4039 8.43646 11.0156 8.43646C10.6273 8.43646 10.3125 8.75126 10.3125 9.13959C10.3125 9.52791 10.6273 9.84271 11.0156 9.84271Z" fill="#2D3748" />
+                     <path d="M3.98437 9.84271C4.3727 9.84271 4.6875 9.52791 4.6875 9.13959C4.6875 8.75126 4.3727 8.43646 3.98437 8.43646C3.59605 8.43646 3.28125 8.75126 3.28125 9.13959C3.28125 9.52791 3.59605 9.84271 3.98437 9.84271Z" fill="#2D3748" />
+                     <path d="M6.32812 9.84271C6.71645 9.84271 7.03125 9.52791 7.03125 9.13959C7.03125 8.75126 6.71645 8.43646 6.32812 8.43646C5.9398 8.43646 5.625 8.75126 5.625 9.13959C5.625 9.52791 5.9398 9.84271 6.32812 9.84271Z" fill="#2D3748" />
+                     <path d="M3.98437 12.1869C4.3727 12.1869 4.6875 11.8721 4.6875 11.4838C4.6875 11.0955 4.3727 10.7807 3.98437 10.7807C3.59605 10.7807 3.28125 11.0955 3.28125 11.4838C3.28125 11.8721 3.59605 12.1869 3.98437 12.1869Z" fill="#2D3748" />
+                     <path d="M6.32812 12.1869C6.71645 12.1869 7.03125 11.8721 7.03125 11.4838C7.03125 11.0955 6.71645 10.7807 6.32812 10.7807C5.9398 10.7807 5.625 11.0955 5.625 11.4838C5.625 11.8721 5.9398 12.1869 6.32812 12.1869Z" fill="#2D3748" />
+                     <path d="M8.67187 12.1869C9.0602 12.1869 9.375 11.8721 9.375 11.4838C9.375 11.0955 9.0602 10.7807 8.67187 10.7807C8.28355 10.7807 7.96875 11.0955 7.96875 11.4838C7.96875 11.8721 8.28355 12.1869 8.67187 12.1869Z" fill="#2D3748" />
+                     <path d="M3.75 1.40561V2.34311" stroke="#2D3748" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
+                     <path d="M11.25 1.40561V2.34311" stroke="#2D3748" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  23 - 30 March 2020
+               </div>
+            </div>
+            <div class="transctns__content">
+               <div class="transctns__newest">
+                  <h2 class="transctns__caption">NEWEST</h2>
+                  <ul class="transctns__list">
+                     <li class="transctns__item">
+                        <div class="transctns__info">
+                           <!--Improve +/- system-->
+                           <div class="transctns__icon upps-downs">
+                              <p style = "display: none;" class="upps-downs-char">-</p>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M9.375 6.28125L6 9.65625L2.625 6.28125" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                 <path d="M5.99976 9.1875L5.99976 2.34375" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div class="transctns__text">
+                              <h2 class="transctns__title card-text--small">Netflix</h2>
+                              <p class="transctns__subtitle muted-text--bold">27 March 2020, at 12:30 PM</p>
+                           </div>
+                        </div>
+                        <p class="upps-downs"><b class = "transctns__value upps-downs-char">-</b>$2500</p>
+                     </li>
+                     <li class="transctns__item">
+                        <div class="transctns__info">
+                           <!--Improve +/- system-->
+                           <div class="transctns__icon upps-downs">
+                              <p style = "display: none;" class="upps-downs-char">+</p>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M9.375 6.28125L6 9.65625L2.625 6.28125" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                 <path d="M5.99976 9.1875L5.99976 2.34375" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div class="transctns__text">
+                              <h2 class="transctns__title card-text--small">Apple</h2>
+                              <p class="transctns__subtitle muted-text--bold">27 March 2020, at 12:30 PM</p>
+                           </div>
+                        </div>
+                        <p class="upps-downs"><b class = "transctns__value upps-downs-char">+</b>$2500</p>
+                     </li>
+                  </ul>
+               </div>
+               <div class="transctns__yesterday">
+                  <h2 class="transctns__caption">Yesterday</h2>
+                  <ul class="transctns__list">
+                     <li class="transctns__item">
+                        <div class="transctns__info">
+                           <!--Improve +/- system-->
+                           <div class="transctns__icon upps-downs">
+                              <p style = "display: none;" class="upps-downs-char">+</p>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M9.375 6.28125L6 9.65625L2.625 6.28125" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                 <path d="M5.99976 9.1875L5.99976 2.34375" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div class="transctns__text">
+                              <h2 class="transctns__title card-text--small">Stripe</h2>
+                              <p class="transctns__subtitle muted-text--bold">26 March 2020, at 13:45 PM</p>
+                           </div>
+                        </div>
+                        <p class="upps-downs"><b class = "transctns__value upps-downs-char">+</b>$800</p>
+                     </li>
+                     <li class="transctns__item">
+                        <div class="transctns__info">
+                           <!--Improve +/- system-->
+                           <div class="transctns__icon upps-downs">
+                              <p style = "display: none;" class="upps-downs-char">+</p>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M9.375 6.28125L6 9.65625L2.625 6.28125" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                 <path d="M5.99976 9.1875L5.99976 2.34375" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div class="transctns__text">
+                              <h2 class="transctns__title card-text--small">HubSpot</h2>
+                              <p class="transctns__subtitle muted-text--bold">26 March 2020, at 12:30 PM</p>
+                           </div>
+                        </div>
+                        <p class="upps-downs"><b class = "transctns__value upps-downs-char">+</b>$1700</p>
+                     </li>
+                     <li class="transctns__item">
+                        <div class="transctns__info">
+                           <!--Improve +/- system-->
+                           <div class="transctns__icon upps-downs">
+                              <p style = "display: none;" class="upps-downs-char"></p>
+                              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <g clip-path="url(#clip0_63_56)">
+                                    <path d="M6.99992 12.25C7.64425 12.25 8.16659 11.7277 8.16659 11.0833C8.16659 10.439 7.64425 9.91667 6.99992 9.91667C6.35559 9.91667 5.83325 10.439 5.83325 11.0833C5.83325 11.7277 6.35559 12.25 6.99992 12.25Z" fill="currentColor" />
+                                    <path d="M6.99992 1.75C6.35825 1.75 5.83325 2.275 5.83325 2.91667V7.58333C5.83325 8.225 6.35825 8.75 6.99992 8.75C7.64159 8.75 8.16659 8.225 8.16659 7.58333V2.91667C8.16659 2.275 7.64159 1.75 6.99992 1.75Z" fill="currentColor" />
+                                 </g>
+                                 <defs>
+                                    <clipPath id="clip0_63_56">
+                                       <rect width="14" height="14" fill="white" />
+                                    </clipPath>
+                                 </defs>
+                              </svg>
+                           </div>
+                           <div class="transctns__text">
+                              <h2 class="transctns__title card-text--small">HubSpot</h2>
+                              <p class="transctns__subtitle muted-text--bold">26 March 2020, at 12:30 PM</p>
+                           </div>
+                        </div>
+                        <p class="transctns__amount">Pending</p>
+                     </li>
+                     <li class="transctns__item">
+                        <div class="transctns__info">
+                           <!--Improve +/- system-->
+                           <div class="transctns__icon upps-downs">
+                              <p style = "display: none;" class="upps-downs-char">-</p>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M9.375 6.28125L6 9.65625L2.625 6.28125" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                 <path d="M5.99976 9.1875L5.99976 2.34375" stroke="currentColor" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div class="transctns__text">
+                              <h2 class="transctns__title card-text--small">HubSpot</h2>
+                              <p class="transctns__subtitle muted-text--bold">26 March 2020, at 12:30 PM</p>
+                           </div>
+                        </div>
+                        <p class="upps-downs"><b class = "transctns__value upps-downs-char">-</b>$987</p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
    </main>
    <footer class="footer">
@@ -767,5 +910,6 @@
    <script src="js/uper-downer.js"></script>
    <script src="js/progress-bars.js"></script>
    <script src="js/settings-toggle.js"></script>
+   <script src="js/card-saver.js"></script>
 </body>
 </html>

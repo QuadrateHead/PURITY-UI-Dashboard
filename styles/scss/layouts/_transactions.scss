@@ -1,0 +1,112 @@
+.transctns {
+   @include block-bg;
+   padding: rem(28) rem(22.5) rem(29) rem(21);
+   display: flex;
+   flex-direction: column;
+   gap: rem(17.5);
+		&__header {
+         @include align-center;
+         justify-content: space-between;
+         @media (max-width: 960px){
+            flex-direction: column;
+            justify-content: center;
+         }
+		}
+
+		&__heading {
+         color: var(--main-text);
+		}
+
+		&__duration {
+         color: var(--muted-text);
+         @include align-center;
+         gap: rem(6);
+         & svg{
+            display: block;
+         }
+		}
+
+      &__content{
+         @include align-center;
+         flex-direction: column;
+         width: 100%;
+         gap: rem(26);
+      }
+
+		&__newest {
+         width: 100%;
+		}
+
+      &__yesterday {
+         width: 100%;
+		}
+
+		&__caption {
+         font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(10);
+         line-height: 150%;
+         color: #a0aec0;
+         margin-bottom: rem(17.5);
+		}
+
+		&__list {
+         @include align-center;
+         flex-direction: column;
+         gap: rem(24);
+		}
+
+		&__item {
+         width: 100%;
+         @include align-center;
+         justify-content: space-between;
+		}
+
+
+		&__info {
+         @include align-center;
+         gap: rem(14);
+		}
+
+		&__icon {
+         @include center;
+         width: rem(35);
+         height: rem(35);
+         border: rem(1) solid currentColor;
+         border-radius: 100%;
+         &.upps-downs--upps{
+            & svg{
+               transform: rotate(180deg);
+            }
+         }
+         & svg{
+            display: block;
+         }
+		}
+
+		&__text {
+		}
+
+		&__title {
+         margin-bottom: rem(4.5);
+         color: var(--main-text);
+		}
+
+		&__subtitle {
+		}
+
+
+		&__amount {
+         font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(13);
+         line-height: 140%;
+         text-align: right;
+         color: var(--main-text);
+		}
+
+		&__value {
+		}
+
+		
+}
