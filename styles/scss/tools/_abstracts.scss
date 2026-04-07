@@ -14,6 +14,7 @@
    --muted-text: hsl(214,20%,69%); //#a0aec0
    --link-text: hsl(218,23%,23%); //#2d3748
    --num-text: #cbd5e0; //211,25,84
+   --profile-email: rgb(160, 174, 192);
    //!Pages text in navbar//
    --page: hsl(214,20%,69%);
    --current-page: hsl(216,24%,16%);
@@ -59,7 +60,8 @@
    //!gradients//
    --black-gradient: linear-gradient(41deg, #313860 0%, #151928 100%);
    --btn-black-gradient: linear-gradient(41deg, #313860 0%, #151928 100%);
-   --light-gradient: linear-gradient(137deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 100%);;
+   --light-gradient: linear-gradient(137deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 100%);
+   --profile-gradient: rgba(255, 255, 255, 0.8);
    --shadow-gradient: linear-gradient(0deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
    //!ShadowBox//
    --boxes-shadows: #{0 rem(4) rem(6) 0 rgba(0, 0, 0, 0.02)};
@@ -95,6 +97,9 @@ body.dark{
    --table-lines: none;
    --status-text: hsl(213.75, 20.25%, 69.02%);
    --status-bg: hsl(220, 25.71%, 13.73%);
+
+   --profile-gradient: linear-gradient(112.83deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 110.84%);
+   --profile-email: rgb(203, 213, 224);
 }
 
 

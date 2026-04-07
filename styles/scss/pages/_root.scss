@@ -31,6 +31,14 @@ html {
    "sidebar main"
    "sidebar footer";
 
+   &.profile{
+      grid-template-areas: 
+      "sidebar sentinel"
+      "sidebar headerblock"
+      "sidebar main"
+      "sidebar footer";
+   }
+
    overflow-x: hidden;
    
    @media (max-width: 1200px){
@@ -41,6 +49,13 @@ html {
       "navbar"
       "main"
       "footer";
+      &.profile{
+         grid-template-areas: 
+         "sentinel"
+         "headerblock"
+         "main"
+         "footer";
+      }
    }
    @media (max-width: 500px){
       padding: rem(22.5/2) rem(31.8/2) rem(23.5/2) rem(31.8/2);
@@ -75,7 +90,9 @@ html {
    grid-area: sentinel;
    height: 1px;
 }
-
+.header{
+   grid-area: headerblock;
+}
 .navbar{
    grid-area: navbar;
    display: flex;

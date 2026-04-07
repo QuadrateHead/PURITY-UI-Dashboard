@@ -1,0 +1,142 @@
+.header {
+	width: 100%;
+		&__breadcrumb {
+			border-radius: rem(15);
+			width: 100%;
+			position: relative;
+			background: url("../../img/images/headerBackground.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: rem(300);
+			& .navbar{
+				&__page-block *{
+					color: white;
+				}
+				&__sign-in *,&__sidebar,&__settings, &__menu-icon{
+					color: white;
+				}
+			}
+			
+		}
+
+		&__profile-elements {
+			//!Fix the position//
+			position: absolute;
+			bottom: -(49/300)*100%;
+			left: rem(24);
+			right: rem(24);
+			border: 1.50px solid #fff;
+			border-radius: rem(15);
+			backdrop-filter: saturate(200%) blur(50px);
+			box-shadow: var(--boxes-shadows);
+			background: var(--profile-gradient);
+			padding: rem(16.5);
+
+			@include align-center;
+			justify-content: space-between;
+			gap: rem(10);
+			
+		}
+		
+		&__info {
+			@include align-center;
+			gap: rem(22);
+		}
+
+		&__avatar {
+			position: relative;
+		}
+
+		&__picture {
+		}
+
+		&__edit {
+			position: absolute;
+			bottom: rem(-5);
+			right: rem(-5);
+			box-shadow: var(--boxes-shadows);
+			background: #fff;
+			border-radius: 8px;
+			@include center;
+			width: 26px;
+			height: 26px;
+			& svg{
+				display: block;
+			}
+		}
+
+		&__person {
+		}
+
+		&__name {
+		}
+
+		&__email {
+			color: var(--profile-email);
+		}
+
+		&__prof-tabs {
+			@include align-center;
+			@media (max-width: 960px){
+				flex-direction: column;
+			}
+			
+		}
+		
+		&__btn {
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: 9px;
+			line-height: 150%;
+			text-align: center;
+			color: var(--main-text);
+
+			@include align-center;
+			
+			gap: rem(4);
+			padding: rem(12) rem(32.75);
+			border-radius: rem(12);
+			& p{
+				box-sizing: content-box;
+				text-align: center;
+			}
+			& svg{
+				display: block;
+			}
+			
+			&--active, &:hover{
+				box-shadow: var(--boxes-shadows);
+				background: rgba(255, 255, 255, 0.3);
+			}
+			
+		}
+		@media (max-width:768px){
+			&__profile-elements {
+				flex-direction: column;
+				gap: 0;
+				transform: translateY(30%);
+			}
+			&__info{
+				flex-direction: column;
+				justify-content: center;
+				gap: 0;
+			}
+			&__person{
+				@include center;
+				flex-direction: column;
+				margin: rem(14) 0;
+			}
+			&__prof-tabs{
+				width: 100%;
+			}
+			&__btn{
+				width: 100%;
+				justify-content: center;
+			}
+		}
+}
+
+
+
+
