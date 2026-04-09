@@ -1,5 +1,7 @@
 .header {
+	margin-bottom: rem(49);
 	width: 100%;
+	//!Add margin for profile-elements//
 		&__breadcrumb {
 			border-radius: rem(15);
 			width: 100%;
@@ -9,6 +11,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			height: rem(300);
+			
 			& .navbar{
 				&__page-block *{
 					color: white;
@@ -24,6 +27,7 @@
 			//!Fix the position//
 			position: absolute;
 			bottom: -(49/300)*100%;
+			
 			left: rem(24);
 			right: rem(24);
 			border: 1.50px solid #fff;
@@ -112,6 +116,7 @@
 			
 		}
 		@media (max-width:768px){
+			margin-bottom: rem(137.8);
 			&__profile-elements {
 				flex-direction: column;
 				gap: 0;
