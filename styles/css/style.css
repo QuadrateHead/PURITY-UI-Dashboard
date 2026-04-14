@@ -3459,3 +3459,186 @@ html {
   text-align: center;
   color: #4fd1c5;
 }
+
+.prfl-projects {
+  width: 100%;
+  background-color: var(--bg-light);
+  border-radius: 0.9375rem;
+  -webkit-box-shadow: var(--boxes-shadows);
+          box-shadow: var(--boxes-shadows);
+  padding: 1.75rem 1.3125rem;
+}
+.prfl-projects__heading {
+  margin-bottom: 0.375rem;
+}
+.prfl-projects__desc {
+  margin-bottom: 1.59375rem;
+}
+.prfl-projects__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .prfl-projects__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .prfl-projects__cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto;
+  }
+}
+.prfl-projects__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.prfl-projects__img-block {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.prfl-projects__img-block::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(49, 56, 96, 0.16)), to(rgba(21, 25, 40, 0.88)));
+  background: linear-gradient(0deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
+}
+.prfl-projects__img {
+  display: block;
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 100%;
+}
+.prfl-projects__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.prfl-projects__num {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.5625rem;
+  line-height: 150%;
+  color: #a0aec0;
+}
+.prfl-projects__title {
+  margin-bottom: 0.65625rem;
+}
+.prfl-projects__subtitle {
+  margin-bottom: 1.25rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.prfl-projects__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.prfl-projects__view-all {
+  border: 1px solid #4fd1c5;
+  border-radius: 12px;
+  padding: 0.625rem 1.96875rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.5625rem;
+  line-height: 150%;
+  text-align: center;
+  color: #4fd1c5;
+}
+.prfl-projects__view-all:hover {
+  background-color: rgb(230, 255, 250);
+}
+.prfl-projects__avatars-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 0.5rem;
+}
+.prfl-projects__avatars-span {
+  border: solid 2px var(--bg-light);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: -0.5rem;
+}
+.prfl-projects__avatars-img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.prfl-projects__add {
+  border: 0.0625rem solid #e0e1e2;
+  border-radius: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6875rem;
+  min-height: 12.5rem;
+}
+.prfl-projects__add:hover {
+  background-color: var(--chekbox-default-hover);
+}
+.prfl-projects__add-desc {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 140%;
+  color: #718096;
+}
