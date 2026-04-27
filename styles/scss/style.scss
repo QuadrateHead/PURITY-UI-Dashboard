@@ -10,6 +10,7 @@
 //!Pages//
 @import "pages/root";
 @import "pages/table-cards";
+@import "pages/sign-in";
 //!Layouts//
 @import "layouts/sidebar";
 @import "layouts/navbar";
@@ -42,3 +43,5 @@
 
 @import "layouts/profile-cards";
 @import "layouts/profile-projects";
+
+@import "layouts/sign-in-main";

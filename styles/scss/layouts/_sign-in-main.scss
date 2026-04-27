@@ -1,0 +1,133 @@
+.sign-in-main {
+   width: 100vw;
+   position: relative;
+      &__container{
+         height: 100%;
+         width: 100%;
+         max-width: rem(987.5);
+         margin: auto;
+         display: flex;
+         justify-content: space-between;
+      }
+		&__form {
+         margin: auto 0;
+         height: auto;
+         padding: rem(48);
+         width: 42%;
+         @media (max-width: 960px){
+            width: 50%;
+         }
+         display: flex;
+         flex-direction: column;
+         gap: rem(36);
+         @media (max-width: 768px){
+            width: 100%;
+            margin-top: rem(100);
+         }
+
+		}
+
+		&__heading {
+         display: flex;
+         flex-direction: column;
+         gap: rem(8.5);
+		}
+
+		&__title {
+         font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(32);
+         line-height: 130%;
+         color: #4fd1c5;
+		}
+
+		&__subtitle {
+		}
+
+		&__inputs {
+         display: flex;
+         flex-direction: column;
+         gap: rem(24);
+		}
+
+		&__label {
+         display: flex;
+         flex-direction: column;
+         gap: rem(5.5);
+		}
+
+		&__caption {
+         margin-left: rem(4.5);
+		}
+
+		&__input {
+         width: 100%;
+         border: rem(1) solid #e2e8f0;
+         border-radius: rem(15);
+         padding: rem(15.25) rem(20);
+         &::placeholder{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: rem(14);
+            line-height: 140%;
+            color: #a0aec0;
+         }
+		}
+
+		&__rmbrme {
+         @include align-center;
+         gap: rem(10);
+         
+		}
+
+		&__submit {
+         display: flex;
+         flex-direction: column;
+         gap: rem(22);
+		}
+
+		&__btn {
+         width: 100%;
+         border-radius: rem(12);
+         padding: rem(15) rem(8);
+         background: #4fd1c5;
+
+         font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(10);
+         line-height: 150%;
+         text-align: center;
+         color: #fff;
+		}
+
+		&__redirection {
+         font-family: var(--font-family);
+         font-weight: 400;
+         font-size: rem(14);
+         line-height: 140%;
+         text-align: center;
+         color: #a0aec0;
+         & a,& a:active{
+            font-weight: 700;
+            color: #4fd1c5;
+         }
+		}
+
+
+		&__img {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 40vw;
+         height: 100%;
+
+         object-position: 42.5% 50%;
+         object-fit: cover;
+
+         border-radius: 0 0 0 rem(25);
+         @media (max-width: 768px){
+            display: none;
+         }
+		}
+}
+
