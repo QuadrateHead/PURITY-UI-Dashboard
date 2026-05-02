@@ -7,13 +7,14 @@
    <link rel="stylesheet" href="styles/css/style.css">
    <link rel="icon" href="favicon.png" type="image/png">
 </head>
-<body class = "sign-in">
+<body class = "sign-in sign-up">
    <script>
       // Check localStorage immediately before the rest of the page renders
       if (localStorage.getItem('myTheme') === 'darkTheme') {
          document.body.classList.add('dark');
       }
    </script>
+   <div class="sign-up__bg"></div>
    <div class="sidebar__backdrop" id="stg-backdrop" onclick="closeSB()"></div>
    <aside class="sidebar">
       <button class="sidebar__close" onclick="closeSB();">
@@ -182,13 +183,13 @@
          </div>
       </div>
    </aside>
-   <nav class="sign-nav">
+   <nav class="sign-nav sign-nav--sign-up">
       <a href="index.html" class="sign-nav__logo">
          <svg width="22.21" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.0771 0H1.13252C0.507046 0 0 0.502293 0 1.1219V10.5297C0 11.1493 0.507046 11.6516 1.13252 11.6516H5.22456V20.8795C5.22419 21.1769 5.3432 21.4623 5.55537 21.6727C5.76754 21.8831 6.05546 22.0014 6.3557 22.0014H15.8525C16.478 22.0014 16.985 21.4991 16.985 20.8795V11.6557H21.0771C21.3773 11.6557 21.6652 11.5375 21.8774 11.327C22.0896 11.1166 22.2086 10.8312 22.2082 10.5338V1.1219C22.2086 0.824482 22.0896 0.539118 21.8774 0.328681C21.6652 0.118244 21.3773 0 21.0771 0ZM1.31272 1.30179H10.4477V10.3512H1.31272V1.30179ZM15.6723 20.701H6.53729V11.6557H15.6723V20.701ZM20.8955 10.3512H11.7605V1.30179H20.8955V10.3512Z" fill="var(--main-text)" />
-            <path d="M7.51893 7.32455C7.77762 7.56505 8.18231 7.55869 8.43317 7.31018C8.68403 7.06167 8.69045 6.66077 8.44768 6.40451L6.35037 4.32686C6.0932 4.07448 5.67879 4.07448 5.42162 4.32686L3.31876 6.40451C3.14397 6.56701 3.07238 6.81092 3.13197 7.04093C3.19156 7.27094 3.37287 7.45055 3.60506 7.50959C3.83725 7.56862 4.08347 7.4977 4.24751 7.32455L5.88045 5.70692L7.51893 7.32455Z" fill="var(--main-text)" />
-            <path d="M14.6951 7.32455L16.328 5.70692L17.9609 7.32455C18.2196 7.56505 18.6243 7.55869 18.8752 7.31018C19.1261 7.06167 19.1325 6.66077 18.8897 6.40451L16.7924 4.32686C16.5352 4.07448 16.1208 4.07448 15.8636 4.32686L13.7663 6.40451C13.5235 6.66077 13.53 7.06167 13.7808 7.31018C14.0317 7.55869 14.4364 7.56505 14.6951 7.32455Z" fill="var(--main-text)" />
-            <path d="M9.4705 14.6767C9.21145 14.4366 8.80675 14.4435 8.55626 14.6924C8.30577 14.9413 8.29996 15.3422 8.54314 15.5981L10.6404 17.6744C10.7635 17.7966 10.9306 17.8654 11.1048 17.8654C11.2791 17.8654 11.4462 17.7966 11.5692 17.6744L13.6665 15.5981C13.8327 15.4338 13.8977 15.1941 13.8371 14.9694C13.7765 14.7446 13.5995 14.569 13.3727 14.5087C13.1459 14.4483 12.9039 14.5123 12.7378 14.6767L11.1048 16.2957L9.4705 14.6767Z" fill="var(--main-text)" />
+            <path d="M21.0771 0H1.13252C0.507046 0 0 0.502293 0 1.1219V10.5297C0 11.1493 0.507046 11.6516 1.13252 11.6516H5.22456V20.8795C5.22419 21.1769 5.3432 21.4623 5.55537 21.6727C5.76754 21.8831 6.05546 22.0014 6.3557 22.0014H15.8525C16.478 22.0014 16.985 21.4991 16.985 20.8795V11.6557H21.0771C21.3773 11.6557 21.6652 11.5375 21.8774 11.327C22.0896 11.1166 22.2086 10.8312 22.2082 10.5338V1.1219C22.2086 0.824482 22.0896 0.539118 21.8774 0.328681C21.6652 0.118244 21.3773 0 21.0771 0ZM1.31272 1.30179H10.4477V10.3512H1.31272V1.30179ZM15.6723 20.701H6.53729V11.6557H15.6723V20.701ZM20.8955 10.3512H11.7605V1.30179H20.8955V10.3512Z" fill="currentColor" />
+            <path d="M7.51893 7.32455C7.77762 7.56505 8.18231 7.55869 8.43317 7.31018C8.68403 7.06167 8.69045 6.66077 8.44768 6.40451L6.35037 4.32686C6.0932 4.07448 5.67879 4.07448 5.42162 4.32686L3.31876 6.40451C3.14397 6.56701 3.07238 6.81092 3.13197 7.04093C3.19156 7.27094 3.37287 7.45055 3.60506 7.50959C3.83725 7.56862 4.08347 7.4977 4.24751 7.32455L5.88045 5.70692L7.51893 7.32455Z" fill="currentColor" />
+            <path d="M14.6951 7.32455L16.328 5.70692L17.9609 7.32455C18.2196 7.56505 18.6243 7.55869 18.8752 7.31018C19.1261 7.06167 19.1325 6.66077 18.8897 6.40451L16.7924 4.32686C16.5352 4.07448 16.1208 4.07448 15.8636 4.32686L13.7663 6.40451C13.5235 6.66077 13.53 7.06167 13.7808 7.31018C14.0317 7.55869 14.4364 7.56505 14.6951 7.32455Z" fill="currentColor" />
+            <path d="M9.4705 14.6767C9.21145 14.4366 8.80675 14.4435 8.55626 14.6924C8.30577 14.9413 8.29996 15.3422 8.54314 15.5981L10.6404 17.6744C10.7635 17.7966 10.9306 17.8654 11.1048 17.8654C11.2791 17.8654 11.4462 17.7966 11.5692 17.6744L13.6665 15.5981C13.8327 15.4338 13.8977 15.1941 13.8371 14.9694C13.7765 14.7446 13.5995 14.569 13.3727 14.5087C13.1459 14.4483 12.9039 14.5123 12.7378 14.6767L11.1048 16.2957L9.4705 14.6767Z" fill="currentColor" />
          </svg>
          <p class="main-text--small sign-nav__logo-name">PURITY UI DASHBOARD</p>
       </a>
@@ -240,36 +241,70 @@
       </div>
       <button class="sign-nav__btn">Free Download</button>
    </nav>
-   <main class="sign-main sign-in-main">
-      <div class="sign-in-main__container">
-         <form action="#" method="get" class="sign-in-main__form">
-            <div class="sign-in-main__heading">
-               <h1 class="sign-in-main__title">Welcome Back</h1>
-               <h3 class="sign-in-main__subtitle muted-text--n-bold">Enter your email and password to sign in</h3>
-            </div>
-            <div class="sign-in-main__inputs">
-               <label class="sign-in-main__label">
-                  <p class="sign-in-main__caption main-text--small-regular">Email</p>
-                  <input type="email" name="email" id="email" class="sign-in-main__input" placeholder="Your email address">
-               </label>
-               <label class="sign-in-main__label">
-                  <p class="sign-in-main__caption main-text--small-regular">Password</p>
-                  <input type="password" name="password" id="password" class="sign-in-main__input" placeholder="Your password">
-               </label>
-               <div class="sign-in-main__rmbrme">               
-                  <label class="switcher">
-                     <input class="switcher__checkbox" type="checkbox" name="#" id="#">
-                     <span class="switcher__slider"></span>
-                  </label>
-                  <p class = "main-text--mini-regular">Remember me</p>
+   <main class="sign-main sign-up-main">
+      <div class="sign-up-main__container">
+         <div class="sign-up-main__heading">
+            <h1 class="sign-up-main__title">Welcome!</h1>
+            <p class="sign-up-main__subtitle">Use these awesome forms to login or create new account in your project for free.</p>
+         </div>
+         <form action="#" method="get" class="sign-up-main__rgstr">
+            <div class="sign-up-main__rgstr-1">
+               <p class="sign-up-main__rgstr-with main-text">Register with</p>
+               <div class="sign-up-main__ways">
+                  <button class="sign-up-main__btn">
+                     <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_92_243)">
+                           <path d="M28.4163 15.5C28.4163 8.36998 22.6297 2.58331 15.4997 2.58331C8.36967 2.58331 2.58301 8.36998 2.58301 15.5C2.58301 21.7516 7.02634 26.9571 12.9163 28.1583V19.375H10.333V15.5H12.9163V12.2708C12.9163 9.7779 14.9443 7.74998 17.4372 7.74998H20.6663V11.625H18.083C17.3726 11.625 16.7913 12.2062 16.7913 12.9166V15.5H20.6663V19.375H16.7913V28.3521C23.3143 27.7062 28.4163 22.2037 28.4163 15.5Z" fill="currentColor" />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_92_243">
+                              <rect width="31" height="31" fill="white" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                  </button>
+                  <button class="sign-up-main__btn">
+                     <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.1389 8.28461C18.6976 8.28461 17.6659 9.44953 15.9658 9.44953C14.2226 9.44953 12.893 8.29308 10.7775 8.29308C8.70681 8.29308 6.49866 9.5573 5.0964 11.711C3.12741 14.748 3.46163 20.4678 6.65064 25.3407C7.79134 27.085 9.3147 29.0413 11.3127 29.0625H11.3491C13.0856 29.0625 13.6014 27.9254 15.9912 27.9121H16.0275C18.3816 27.9121 18.8539 29.0558 20.5831 29.0558H20.6194C22.6174 29.0346 24.2225 26.867 25.3632 25.1294C26.1843 23.8797 26.4894 23.2524 27.1191 21.8386C22.506 20.0876 21.765 13.5479 26.3272 11.0407C24.9346 9.29695 22.9777 8.28703 21.1328 8.28703L21.1389 8.28461Z" fill="currentColor" />
+                        <path d="M20.6008 1.93903C19.1477 2.03772 17.4524 2.96287 16.4594 4.17078C15.5585 5.26547 14.8174 6.88934 15.108 8.46416H15.2243C16.7719 8.46416 18.3558 7.53234 19.2809 6.33836C20.1722 5.2019 20.8479 3.59135 20.6008 1.93903Z" fill="currentColor" />
+                     </svg>
+                  </button>
+                  <button class="sign-up-main__btn">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.1794 10.3818L22.0734 9.93222H12.3028V14.0675H18.1406C17.5345 16.9457 14.722 18.4607 12.4247 18.4607C10.7531 18.4607 8.99109 17.7575 7.82484 16.6274C7.20953 16.0216 6.71974 15.3004 6.38353 14.505C6.04731 13.7097 5.87126 12.8558 5.86547 11.9924C5.86547 10.2505 6.64828 8.50816 7.78734 7.36206C8.9264 6.21597 10.6467 5.57472 12.3572 5.57472C14.3161 5.57472 15.72 6.61488 16.245 7.08925L19.1836 4.16613C18.3216 3.40863 15.9534 1.49988 12.2625 1.49988C9.41484 1.49988 6.68437 2.59066 4.68844 4.58003C2.71875 6.53894 1.69922 9.37159 1.69922 11.9999C1.69922 14.6282 2.66391 17.3192 4.57266 19.2936C6.61219 21.3992 9.50062 22.4999 12.4748 22.4999C15.1809 22.4999 17.7459 21.4396 19.5741 19.5158C21.3712 17.6221 22.3008 15.0017 22.3008 12.2549C22.3008 11.0985 22.1845 10.4118 22.1794 10.3818Z" fill="currentColor" />
+                     </svg>
+                  </button>
                </div>
             </div>
-            <div class="sign-in-main__submit">
-               <button type="submit" class="sign-in-main__btn">SIGN IN</button>
-               <p class="sign-in-main__redirection">Don't have an account? <a href="sign-up.html">Sign up</a></p>
+            <p class="sign-up-main__or">or</p>
+            <div class="sign-up-main__rgstr-2">
+               <div class="sign-up-main__inputs">
+                  <label class="sign-up-main__label">
+                     <p class="sign-up-main__caption main-text--small-regular">Name</p>
+                     <input type="text" name="email" id="nameSignUp" class="sign-up-main__input" placeholder="Your full name">
+                  </label>
+                  <label class="sign-up-main__label">
+                     <p class="sign-up-main__caption main-text--small-regular">Email</p>
+                     <input type="email" name="email" id="emailSignUp" class="sign-up-main__input" placeholder="Your email address">
+                  </label>
+                  <label class="sign-up-main__label">
+                     <p class="sign-up-main__caption main-text--small-regular">Password</p>
+                     <input type="password" name="password" id="passwordSignUp" class="sign-up-main__input" placeholder="Your password">
+                  </label>
+                  <div class="sign-up-main__rmbrme">               
+                     <label class="switcher">
+                        <input class="switcher__checkbox" type="checkbox" name="#" id="#">
+                        <span class="switcher__slider"></span>
+                     </label>
+                     <p class = "main-text--mini-regular">Remember me</p>
+                  </div>
+               </div>
+               <div class="sign-up-main__submit">
+                  <button type="submit" class="sign-up-main__sign">SIGN IN</button>
+                  <p class="sign-up-main__redirection">Already have an account? <a href="sign-up.html">Sign in</a></p>
+               </div>
             </div>
          </form>
-         <img src="img/images/sign-in.jpg" alt="" class="sign-in-main__img">
       </div>
    </main>
    <footer class="footer">

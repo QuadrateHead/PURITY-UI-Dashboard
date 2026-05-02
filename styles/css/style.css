@@ -551,7 +551,6 @@ html {
 }
 
 .sign-in {
-  position: relative;
   -webkit-transition: color, background-color 0.2s linear 0s;
   transition: color, background-color 0.2s linear 0s;
   z-index: 1000;
@@ -567,6 +566,29 @@ html {
   grid-template-areas: "signmain" "footer";
   grid-template-rows: 1fr auto;
   gap: 2.5rem;
+}
+
+.sign-up {
+  padding: 1.5rem;
+  position: relative;
+}
+.sign-up__bg {
+  background-image: url("../../img/images/sign-up-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 50vh;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .sign-up__bg {
+    margin: 1.5rem;
+    border-radius: 0.9375rem;
+  }
 }
 
 .sign-main {
@@ -707,6 +729,21 @@ html {
   .sign-nav__btn {
     display: none;
   }
+}
+.sign-nav--sign-up {
+  border: none;
+  backdrop-filter: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+  position: absolute;
+}
+.sign-nav--sign-up * {
+  color: #fff;
+}
+.sign-nav--sign-up .sign-nav__btn {
+  background: #fff;
+  color: var(--black-gradient);
 }
 
 .sign-in footer {
@@ -3990,4 +4027,218 @@ html {
   .sign-in-main__img {
     display: none;
   }
+}
+
+.sign-up-main {
+  margin-inline: auto;
+  width: min(100%, 28.25rem);
+}
+.sign-up-main__container {
+  width: 100%;
+  margin-top: 7.78125rem;
+}
+.sign-up-main__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.59375rem;
+  max-width: 12.25rem;
+  margin-inline: auto;
+  margin-bottom: 4.15625rem;
+}
+.sign-up-main__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 130%;
+  text-align: center;
+  color: #fff;
+}
+.sign-up-main__subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  text-align: center;
+  color: #fff;
+}
+.sign-up-main__rgstr {
+  -webkit-box-shadow: var(--boxes-shadows);
+          box-shadow: var(--boxes-shadows);
+  background: var(--bg-light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.84375rem 3.1875rem;
+  border-radius: 0.9375rem;
+}
+.sign-up-main__rgstr-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+}
+.sign-up-main__ways {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.sign-up-main__btn {
+  border: 0.0625rem solid #e2e8f0;
+  border-radius: 0.9375rem;
+  padding: 1.375rem;
+  color: var(--main-text);
+}
+.sign-up-main__btn svg {
+  display: block;
+  width: 1.9375rem;
+  height: 1.9375rem;
+}
+.sign-up-main__or {
+  margin: 1.28125rem 0 1.0625rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 140%;
+  text-align: center;
+  color: #a0aec0;
+}
+.sign-up-main__rgstr-2 {
+  min-width: 100%;
+}
+.sign-up-main__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2.25rem;
+}
+.sign-up-main__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.34375rem;
+}
+.sign-up-main__caption {
+  margin-left: 0.28125rem;
+}
+.sign-up-main__input {
+  width: 100%;
+  border: 0.0625rem solid #e2e8f0;
+  border-radius: 0.9375rem;
+  padding: 0.953125rem 1.25rem;
+}
+.sign-up-main__input::-webkit-input-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.sign-up-main__input::-moz-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.sign-up-main__input:-ms-input-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.sign-up-main__input::-ms-input-placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.sign-up-main__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #a0aec0;
+}
+.sign-up-main__rmbrme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+.sign-up-main__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+}
+.sign-up-main__sign {
+  width: 100%;
+  border-radius: 0.75rem;
+  padding: 0.9375rem 0.5rem;
+  background: #4fd1c5;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+}
+.sign-up-main__redirection {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  text-align: center;
+  color: #a0aec0;
+}
+.sign-up-main__redirection a, .sign-up-main__redirection a:active {
+  font-weight: 700;
+  color: #4fd1c5;
 }
