@@ -15,6 +15,7 @@
       }
    </script>
    <div class="sidebar__backdrop" id="stg-backdrop" onclick="closeSB()"></div>
+   <div class="prjct-input__backdrop" id="prjct-input-backdrop" onclick="closePE()"></div>
    <aside class="sidebar">
       <button class="sidebar__close" onclick="closeSB();">
          <svg viewBox="0 0 24 24" focusable="false" class="sidebar__close-icon" aria-hidden="true">
@@ -434,7 +435,49 @@
          </defs>
       </svg>
    </button>
-   
+   <form action="#" method="get" class="prjct-input">
+      <div class="prjct-input__heading">
+         <h1 class="prjct-input__title">Make A New Project</h1>
+         <h4 class="prjct-input__subtitle muted-text--bold">Enter project settings</h4>
+      </div>
+      <label class="prjct-input__label">
+         <p class="prjct-input__caption main-text--small-regular">Name of Project</p>
+         <input type="text" maxlength="25" name="email" id="nameOfProject" class="prjct-input__input" placeholder="Put a name of your project">
+      </label>
+      <label class="prjct-input__label">
+         <p class="prjct-input__caption main-text--small-regular">Description of Project</p>
+         <input type="text" name="password" id="descOfProject" class="prjct-input__input" placeholder="Put description of your projects">
+      </label>
+      <!--Think about logic-->
+      <div class="prjct-input__mmbrs">
+         <label class="prjct-input__mmbrs-main">
+            <p class="prjct-input__caption main-text--small-regular">Members of your project</p>
+            <div class="prjct-input__mmbrs-input">
+               <input type="text" name="password" id="membersInput" class="prjct-input__input" placeholder="Put member name">
+               <div class="prjct-input__mmbrs-arrow"></div>
+            </div>
+         </label>
+         <div class="prjct-input__mmbrs-dropdown">
+            <div class="prjct-input__mmbrs-optn">
+               <img src="" alt="" class="prjct-input__mmbrs-avatar">
+               <p class="prjct-input__mmbrs-name main-text--medium">Alice</p>
+            </div>
+            <div class="prjct-input__mmbrs-optn">
+               <img src="" alt="" class="prjct-input__mmbrs-avatar">
+               <p class="prjct-input__mmbrs-name main-text--medium">John</p>
+            </div>
+            <div class="prjct-input__mmbrs-optn">
+               <img src="" alt="" class="prjct-input__mmbrs-avatar">
+               <p class="prjct-input__mmbrs-name main-text--medium">Price</p>
+            </div>
+            <div class="prjct-input__mmbrs-optn">
+               <img src="" alt="" class="prjct-input__mmbrs-avatar">
+               <p class="prjct-input__mmbrs-name main-text--medium">Gorgonzola</p>
+            </div>
+         </div>
+      </div>
+      <button type="submit" class="prjct-input__btn">Add Project</button>
+   </form>
    <main class="main">
       <div class="prflcrds">
          <div class="prflcrds__card">
@@ -678,7 +721,7 @@ types of music.</p>
                   </div>
                </div>
             </div>
-            <button class="prfl-projects__add">
+            <button onclick="openPE()" class="prfl-projects__add">
                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 6.56298V23.438" stroke="#718096" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M23.4375 15.0005H6.5625" stroke="#718096" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -704,5 +747,6 @@ types of music.</p>
    <script src="js/page-switcher.js"></script>
    <script src="js/theme-switcher.js"></script>
    <script src="js/settings-toggle.js"></script>
+   <script src="js/project-editor.js"></script>
 </body>
 </html>

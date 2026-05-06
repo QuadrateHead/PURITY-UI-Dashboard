@@ -40,6 +40,7 @@
    --link-dark: hsl(216,15%,52%);
    --link-light: #a0aec0;
    --link-white: #FFFFFF;
+   --link-cyan-lighest: #81E6D9; //hsl(177,52,46)
    --link-cyan-light: #38b2ac; //hsl(177,52,46)
    --link-cyan-dark: #4fd1c5; //hsl (174,59,56)
    //!Checkbox//
@@ -101,6 +102,7 @@ body.dark{
    --profile-gradient: linear-gradient(112.83deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 110.84%);
    --profile-email: rgb(203, 213, 224);
    --light-gradient: linear-gradient(112.83deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 110.84%);;
+   --link-cyan-lighest: #4fd1c5; //hsl(177,52,46)
 }
 
 

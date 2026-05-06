@@ -1,0 +1,167 @@
+//!Make logic of Member part//
+.prjct-input {
+   opacity: 0;
+   pointer-events: none; 
+
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 999;
+   @include block-bg;
+   padding: rem(33);
+   width: min(rem(750), 100%);
+	
+	display: flex;
+	flex-direction: column;
+	gap: rem(40);
+   &.active{
+      opacity: 1;
+      pointer-events: auto;
+   }
+      &__backdrop{
+         position: fixed;
+         inset: 0;
+         background-color: rgba(0, 0, 0, 0.5);
+         backdrop-filter: blur(4px);           
+         
+         z-index: 998;                         
+         
+         opacity: 0;
+         pointer-events: none;                 
+         transition: opacity 0.3s ease;
+      }
+      &__backdrop.active{
+			opacity: 1;
+    		pointer-events: auto;
+	   }
+
+		&__heading {
+		}
+
+		&__title {
+			font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(32);
+         line-height: 130%;
+         color: #4fd1c5;
+		}
+
+		&__subtitle {
+		}
+
+
+
+		&__label {
+			display: flex;
+         flex-direction: column;
+         gap: rem(5.5);
+		}
+
+		&__caption {
+			margin-left: rem(4.5);
+		}
+
+		&__input {
+			width: 100%;
+         border: rem(1) solid #e2e8f0;
+         border-radius: rem(15);
+         padding: rem(15.25) rem(20);
+
+         font-family: var(--font-family);
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 140%;
+			color: var(--main-text);
+         &::placeholder{
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: rem(14);
+            line-height: 140%;
+            color: #a0aec0;
+         }
+		}
+
+
+
+		&__mmbrs {
+			position: relative;
+		}
+
+		&__mmbrs-main {
+			
+		}
+
+		&__mmbrs-input{
+			position: relative;
+		}
+
+		&__mmbrs-arrow {
+			position: absolute;
+			top: 35%;
+			right: rem(15);
+			width: 12px;
+			height: 12px;
+			border-right: 2px solid var(--main-text);
+			border-bottom: 2px solid var(--main-text);
+			transform: rotate(45deg);
+			transition: 0.3s ease;
+		}
+
+		&__mmbrs.open &__mmbrs-arrow {
+			transform: rotate(225deg); // вниз → вверх 180+45 
+		}
+
+		&__mmbrs-dropdown {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: var(--bg);
+			border-radius: 0 0 rem(5) rem(5);
+			opacity: 0;
+			overflow: hidden;
+			max-height: 0;
+			visibility: hidden;
+			transition: max-height 0.3s ease;
+		}
+		&__mmbrs.open &__mmbrs-dropdown {
+			max-height: 300px;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&__mmbrs-optn {
+			padding: rem(13);
+			cursor: pointer;
+			transition: 0.2s;
+			&:hover {
+				background: #ffd2c7;
+			}
+		}
+
+		&__mmbrs-name {
+		}
+
+		&__mmbrs-avatar {
+		}
+
+		&__btn{
+			
+			width: 100%;
+         border-radius: rem(12);
+         padding: rem(15) rem(8);
+         background: #4fd1c5;
+
+         font-family: var(--font-family);
+         font-weight: 700;
+         font-size: rem(10);
+         line-height: 150%;
+         text-align: center;
+         color: #fff;
+         &:hover{
+				background-color: #81E6D9;
+			}
+		}
+}
+

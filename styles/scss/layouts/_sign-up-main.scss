@@ -64,6 +64,9 @@
 			border-radius: rem(15);
 			padding: rem(22);
 			color: var(--main-text);
+			&:hover{
+				background-color: var(--link-cyan-lighest);
+			}
 			& svg{
 				display: block;
 				width: rem(31);
@@ -109,6 +112,12 @@
          border: rem(1) solid #e2e8f0;
          border-radius: rem(15);
          padding: rem(15.25) rem(20);
+
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 140%;
+			color: var(--main-text);
          &::placeholder{
             font-family: var(--font-family);
             font-weight: 400;
@@ -141,6 +150,9 @@
          line-height: 150%;
          text-align: center;
          color: #fff;
+			&:hover{
+				background-color: #81E6D9;
+			}
 		}
 
 		&__redirection {
@@ -154,6 +166,9 @@
             font-weight: 700;
             color: #4fd1c5;
          }
+			& a:hover{
+				color: #81E6D9;;
+			}
 		}
 }
 
