@@ -4427,9 +4427,23 @@ html {
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3125rem;
 }
 .prjct-input__mmbrs-optn:hover {
-  background: #ffd2c7;
+  background: var(--bg-light);
+  -webkit-box-shadow: var(--boxes-shadows);
+          box-shadow: var(--boxes-shadows);
+}
+.prjct-input__mmbrs-avatar {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.9375rem;
 }
 .prjct-input__btn {
   width: 100%;

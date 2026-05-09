@@ -135,15 +135,22 @@
 			padding: rem(13);
 			cursor: pointer;
 			transition: 0.2s;
+			@include align-center;
+			gap: rem(5);
 			&:hover {
-				background: #ffd2c7;
+				background: var(--bg-light);
+				box-shadow: var(--boxes-shadows);
 			}
 		}
 
 		&__mmbrs-name {
+			
 		}
 
 		&__mmbrs-avatar {
+			width: rem(20);
+			height: rem(20);
+			border-radius: rem(15);
 		}
 
 		&__btn{

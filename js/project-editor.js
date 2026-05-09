@@ -9,12 +9,12 @@ function closePE(){
    document.body.classList.remove('no-scroll');
 }
 
-const block = document.querySelector('.prjct-input__mmbrs');
+const form = document.querySelector('.prjct-input__mmbrs');
 const input = document.getElementById('membersInput');
-const arrow = block.querySelector('.prjct-input__mmbrs-arrow')
-const options = block.querySelectorAll('.prjct-input__mmbrs-optn');
+const arrow = form.querySelector('.prjct-input__mmbrs-arrow')
+const options = form.querySelectorAll('.prjct-input__mmbrs-optn');
 arrow.addEventListener('click', () => {
-  block.classList.toggle('open');
+  form.classList.toggle('open');
 });
 
 
@@ -22,13 +22,51 @@ arrow.addEventListener('click', () => {
 options.forEach(option => {
    option.addEventListener('click', () => {
       input.value = option.querySelector(".prjct-input__mmbrs-name").textContent;
-      block.classList.remove('open');
+      form.classList.remove('open');
    });
 });
 
 
 document.addEventListener('click', (e) => {
-   if(!block.contains(e.target)){
-      block.classList.remove('open');
+   if(!form.contains(e.target)){
+      form.classList.remove('open');
    }
 });
+document.querySelector(".prjct-input").addEventListener("submit", (e) =>{
+   e.preventDefault();
+   const name = document.getElementById("nameOfProject").value;
+   const desc = document.getElementById("descOfProject").value;
+   const number = document.querySelector(".prfl-projects__cards").childElementCount;
+   //let member = document.getElementById("membersInput").value;
+   const block = `<div class="prfl-projects__card">
+               <div class="prfl-projects__img-block">
+                  <img src="img/images/profile-projects/huy-phan-HqLcI0Dyl4o-unsplash 1.png" alt="" class="prfl-projects__img">
+               </div>
+               <div class="prfl-projects__content">
+                  <p class="prfl-projects__num">Project #${number}</p>
+                  <h2 class="prfl-projects__title main-text">${name}</h2>
+                  <p class="prfl-projects__subtitle muted-text--small">${desc}</p>
+                  <div class="prfl-projects__footer">
+                     <button class="prfl-projects__view-all">View All</button>
+                     <div class="prfl-projects__avatars-group">
+                        <span class="prfl-projects__avatars-span">
+                           <img src="img/images/project-members/Person Photo 16.png" alt="" class="prfl-projects__avatars-img">
+                        </span>
+                        <span class="prfl-projects__avatars-span">
+                           <img src="img/images/project-members/Person Photo 14.png" alt="" class="prfl-projects__avatars-img">
+                        </span>
+                        <span class="prfl-projects__avatars-span">
+                           <img src="img/images/project-members/Person Photo 23.png" alt="" class="prfl-projects__avatars-img">
+                        </span>
+                        <span class="prfl-projects__avatars-span">
+                           <img src="img/images/project-members/Elipse 5.png" alt="" class="prfl-projects__avatars-img">
+                        </span>
+                     </div>
+                  </div>
+               </div>
+            </div>      
+   `
+   document.querySelector(".prfl-projects__cards").insertAdjacentHTML("beforeend", block);
+   form.classList.remove('open');
+});
+
